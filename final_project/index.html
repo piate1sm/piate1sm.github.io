@@ -11,6 +11,18 @@
       <a-sky color="#87CEEB"></a-sky>
       <a-plane rotation="-90 0 0" width="20" height="20" color="#7BC8A4" position="2.571 0.000 4.712"></a-plane>
       <a-plane position="3.330 0.152 -0.604" rotation="-90 0 0" width="1.880" height="1.730" src="#bathroom-floor"></a-plane>
+
+      <a-assets>
+        <img id="bathroom-floor" src="granite_tile_1k.blend/textures/granite_tile_diff_1k.jpg">
+        <img id="wood" src="wood_table_worn_1k.blend/textures/wood_table_worn_diff_1k_light.png">
+        <img id="black-countertop" src="black_marble_gold.png">
+        <img id="wall" src="beige_wall_001_1k.blend/textures/beige_wall_001_disp_1k.png">
+        <img id="backsplash" src="backsplash.jpg">
+        <img id="flooring" src="herringbone_parquet_diff_1k.jpg">
+        <img id="white-countertop" src="white_marble_gold.jpeg">
+        <img id="curtain" src="terlenka_1k.blend/textures/terlenka_anisotropy_strength_1k.png">
+        <img id="wall-2" src="beige_wall_001_1k.blend/textures/beige_wall_001_rough_1k.jpg">
+      </a-assets>
       
 <a-entity id="main-flooring" position="0 0.01 0">
   <a-plane position="0.149 0.000 4.107" rotation="-90 90 0" width="5.470" height="10.480" 
@@ -30,24 +42,16 @@
 
 </a-entity>
 
-      <a-assets>
-        <img id="bathroom-floor" src="granite_tile_1k.blend/textures/granite_tile_diff_1k.jpg">
-        <img id="wood" src="wood_table_worn_1k.blend/textures/wood_table_worn_diff_1k_light.png">
-        <img id="black-countertop" src="black_marble_gold.png">
-        <img id="wall" src="beige_wall_001_1k.blend/textures/beige_wall_001_diff_1k.jpg">
-        <img id="backsplash" src="backsplash.jpg">
-        <img id="flooring" src="herringbone_parquet_diff_1k.jpg">
-        <img id="white-countertop" src="white_marble_gold.jpeg">
-      </a-assets>
-
 
   <a-entity id="wall-15ft" position="0 1.295 -1.50">
-  <a-box width="4.75" height="2.59" depth="0.05" position="0 0 0.025" material="color: #06165c"></a-box>
+  <a-box width="4.75" height="2.59" depth="0.05" position="0 0 0.025" src="#wall" color="#0723a2"
+        material="repeat: 4 2; roughness: 1"></a-box>
   <a-box width="4.75" height="2.59" depth="0.05" position="0 0 -0.025" material="color: #f7f5e6"></a-box>
 </a-entity>
 
 <a-entity id="wall-9ft-6in-1" position="-2.326 1.295 -0.05" rotation="0 90 0">
-  <a-box width="2.90" height="2.59" depth="0.05" position="0 0 0.025" material="color: #06165c"></a-box>
+  <a-box width="2.90" height="2.59" depth="0.05" position="0 0 0.025" src="#wall" color="#0723a2"
+        material="repeat: 4 2; roughness: 1"></a-box>
   <a-box width="2.90" height="2.59" depth="0.05" position="0 0 -0.025" material="color: #f7f5e6"></a-box>
 </a-entity>
 
@@ -57,7 +61,8 @@
 
 <a-entity id="wall-18ft" position="-5.204 1.293 4.097" rotation="0 -90 0">
   <a-box width="5.486" height="2.59" depth="0.05" position="0 0 -0.025" material="color: #f7f5e6"></a-box>
-  <a-box width="5.426" height="2.59" depth="0.05" position="0 0 -0.086" material="color: #05b3a4"></a-box>
+  <a-box width="5.426" height="2.59" depth="0.05" position="0 0 -0.086" src="#backsplash" 
+         material="repeat: 8 2"></a-box>
 </a-entity>
 
 <a-entity id="wall-9ft-6in3" position="-3.753 1.295 6.882" rotation="0 0 0">
@@ -69,7 +74,7 @@
 </a-entity>
 
 <a-entity id="wall-17ft" position="0.347 1.296 10.037" rotation="0 0 0">
-  <a-box width="5.334" height="2.59" depth="0.05" position="0 0 -0.025" material="color: #f7f5e6"></a-box>
+  <a-box width="5.364" height="2.59" depth="0.05" position="0 0 -0.025" material="color: #f7f5e6"></a-box>
 </a-entity>
 
 <a-entity id="wall-9ft" position="3.011 1.295 8.673" rotation="0 -90 0">
@@ -92,12 +97,14 @@
 </a-entity>
 
 <a-entity id="wall-5ft6in" position="2.326 1.295 -0.618" rotation="0 -90 0">
-  <a-box width="1.676" height="2.59" depth="0.05" position="0 0 0.025" material="color: #06165c"></a-box>
+  <a-box width="1.676" height="2.59" depth="0.05" position="0 0 0.025" src="#wall" color="#0723a2"
+        material="repeat: 4 2; roughness: 1"></a-box>
   <a-box width="1.676" height="2.59" depth="0.05" position="0 0 -0.025" material="color: #556b2f"></a-box>
 </a-entity>
 
 <a-entity id="wall-5ft6in-2" position="2.326 1.295 1.055" rotation="0 -90 0">
-  <a-box width="1.676" height="2.59" depth="0.05" position="0 0 0.025" material="color: #06165c"></a-box>
+  <a-box width="1.676" height="2.59" depth="0.05" position="0 0 0.025" src="#wall" color="#0723a2"
+        material="repeat: 4 2; roughness: 1"></a-box>
   <a-box width="1.676" height="2.59" depth="0.05" position="0 0 -0.025" material="color: #f7f5e6"></a-box>
 </a-entity>
 
@@ -203,9 +210,14 @@
   <a-cylinder color="#C0C0C0" radius="0.02" height="1.22" rotation="0 0 90" position="0 2.3 0"></a-cylinder>
   
   <a-entity id="folds-1" position="-0.45 1.15 0">
-    <a-box width="0.15" height="2.3" depth="0.02" position="-0.08 0 0.02" rotation="0 45 0" material="color: #FFB6C1"></a-box>
-    <a-box width="0.15" height="2.3" depth="0.02" position="0 0 -0.02" rotation="0 -45 0" material="color: #FFB6C1"></a-box>
-    <a-box width="0.15" height="2.3" depth="0.02" position="0.08 0 0.02" rotation="0 45 0" material="color: #FFB6C1"></a-box>
+    <a-box width="0.15" height="2.3" depth="0.02" position="-0.08 0 0.02" rotation="0 45 0" 
+           src="#curtain" material="color: #749b31; repeat: 1 5"></a-box>
+    
+           <a-box width="0.15" height="2.3" depth="0.02" position="0 0 -0.02" rotation="0 -45 0" 
+           src="#curtain" material="color: #749b31; repeat: 1 5"></a-box>
+    
+           <a-box width="0.15" height="2.3" depth="0.02" position="0.08 0 0.02" rotation="0 45 0" 
+           src="#curtain" material="color: #749b31; repeat: 1 5"></a-box>
   </a-entity>
 </a-entity>
 
@@ -213,9 +225,9 @@
   <a-cylinder color="#C0C0C0" radius="0.02" height="1.22" rotation="0 0 90" position="0 2.3 0"></a-cylinder>
   
   <a-entity id="folds-2" position="-0.45 1.15 0">
-    <a-box width="0.15" height="2.3" depth="0.02" position="-0.08 0 0.02" rotation="0 45 0" material="color: #FFB6C1"></a-box>
-    <a-box width="0.15" height="2.3" depth="0.02" position="0 0 -0.02" rotation="0 -45 0" material="color: #FFB6C1"></a-box>
-    <a-box width="0.15" height="2.3" depth="0.02" position="0.08 0 0.02" rotation="0 45 0" material="color: #FFB6C1"></a-box>
+    <a-box width="0.15" height="2.3" depth="0.02" position="-0.08 0 0.02" rotation="0 45 0" src="#curtain" material="color: #749b31; repeat: 1 5"></a-box>
+    <a-box width="0.15" height="2.3" depth="0.02" position="0 0 -0.02" rotation="0 -45 0" src="#curtain" material="color: #749b31; repeat: 1 5"></a-box>
+    <a-box width="0.15" height="2.3" depth="0.02" position="0.08 0 0.02" rotation="0 45 0" src="#curtain" material="color: #749b31; repeat: 1 5"></a-box>
   </a-entity>
 </a-entity>
 
@@ -223,9 +235,9 @@
   <a-cylinder color="#C0C0C0" radius="0.02" height="1.22" rotation="0 0 90" position="0 2.3 0"></a-cylinder>
   
   <a-entity id="folds-3" position="-0.45 1.15 0">
-    <a-box width="0.15" height="2.3" depth="0.02" position="-0.08 0 0.02" rotation="0 45 0" material="color: #FFB6C1"></a-box>
-    <a-box width="0.15" height="2.3" depth="0.02" position="0 0 -0.02" rotation="0 -45 0" material="color: #FFB6C1"></a-box>
-    <a-box width="0.15" height="2.3" depth="0.02" position="0.08 0 0.02" rotation="0 45 0" material="color: #FFB6C1"></a-box>
+    <a-box width="0.15" height="2.3" depth="0.02" position="-0.08 0 0.02" rotation="0 45 0" src="#curtain" material="color: #749b31; repeat: 1 5"></a-box>
+    <a-box width="0.15" height="2.3" depth="0.02" position="0 0 -0.02" rotation="0 -45 0" src="#curtain" material="color: #749b31; repeat: 1 5"></a-box>
+    <a-box width="0.15" height="2.3" depth="0.02" position="0.08 0 0.02" rotation="0 45 0" src="#curtain" material="color: #749b31; repeat: 1 5"></a-box>
   </a-entity>
 </a-entity>
 
