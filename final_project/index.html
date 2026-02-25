@@ -30,6 +30,15 @@
         <img id="grey-jacket" src="jackets/grey-jacket.png">
         <img id="brown-jacket" src="jackets/brown-jacket.png">
       </a-assets>
+
+      <assets>
+        <img id="dark-denim" src="Pants/dark-denim.png">
+        <img id="medium-denim" src="Pants/medium-denim.png">
+        <img id="light-denim" src="Pants/light-denim.png">
+        <img id="hiking-pants" src="Pants/hiking-pants.png">
+      </assets>
+
+      
       
 <a-entity id="main-flooring" position="0 0.01 0">
   <a-plane position="0.149 0.000 4.107" rotation="-90 90 0" width="5.470" height="10.480" 
@@ -612,61 +621,57 @@
   <a-cylinder radius="0.03" height="0.05" position="-0.18 0.025 -0.11" color="#111"></a-cylinder>
 </a-entity>
 
-<!-- <a-entity id="clothing-rack" position="0.149 0.000 4.107" rotation="0 90 0">
-  <a-cylinder id="leg-left" radius="0.02" height="1.6" position="-0.75 0.8 0" color="#D4AF37" metalness="0.180"></a-cylinder>
-  <a-cylinder id="leg-right" radius="0.02" height="1.6" position="0.75 0.8 0" color="#D4AF37" metalness="0.180"></a-cylinder>
-  <a-cylinder id="top-bar" radius="0.02" height="1.5" position="0 1.55 0" rotation="0 0 90" color="#D4AF37" metalness="0.180"></a-cylinder>
+<a-entity id="clothing-rack" position="1.564 0.000 -0.267" rotation="0 90 0">
+  <a-cylinder id="leg-left" radius="0.02" height="1.270" position="-0.75 0.661 0" color="#D4AF37" metalness="0.180"></a-cylinder>
+  <a-cylinder id="leg-right" radius="0.02" height="1.270" position="0.75 0.661 0" color="#D4AF37" metalness="0.180"></a-cylinder>
+  <a-cylinder id="top-bar" radius="0.02" height="1.5" position="-0.000 1.225 -0.001" rotation="0 0 90" color="#D4AF37" metalness="0.180"></a-cylinder>
   <a-box id="base-left" width="0.4" height="0.03" depth="0.05" position="-0.75 0.015 0" color="#D4AF37"></a-box>
   <a-box id="base-right" width="0.4" height="0.03" depth="0.05" position="0.75 0.015 0" color="#D4AF37"></a-box>
 
   <a-entity id="jeans-group" position="-0.5 1.5 0">
-    <a-box width="0.03" height="0.7" depth="0.3" position="0 -0.35 0" color="#1A2942"></a-box>
-    <a-box width="0.03" height="0.7" depth="0.3" position="0.08 -0.35 0" color="#23395d"></a-box>
-    <a-box width="0.03" height="0.7" depth="0.3" position="0.16 -0.35 0" color="#1A2942"></a-box>
-    <a-box width="0.03" height="0.7" depth="0.3" position="0.24 -0.35 0" color="#23395d"></a-box>
+    <a-box width="0.03" height="1.140" depth="0.3" position="0 -0.861 0" src=#medium-denim></a-box>
+    <a-box width="0.03" height="1.140" depth="0.3" position="0.08 -0.861 0" src=#light-denim></a-box>
+    <a-box width="0.03" height="1.140" depth="0.3" position="0.16 -0.861 0" src=#dark-denim></a-box>
+    <a-box width="0.03" height="1.140" depth="0.3" position="0.24 -0.861 0" src=#medium-denim></a-box>
   </a-entity>
 
   <a-entity id="hiking-pants-group" position="0.15 1.5 0">
-    <a-box width="0.04" height="0.7" depth="0.35" position="0 -0.35 0" color="#556B2F"></a-box>
-    <a-box width="0.04" height="0.7" depth="0.35" position="0.1 -0.35 0" color="#336454"></a-box>
-    <a-box width="0.04" height="0.7" depth="0.35" position="0.2 -0.35 0" color="#556B2F"></a-box>
-    <a-box width="0.04" height="0.7" depth="0.35" position="0.3 -0.35 0" color="#336454"></a-box>
-  </a-entity>
-</a-entity> -->
-
-<a-entity id="luxury-closet-rack" position="-1 0 4">
-  <a-cylinder radius="0.02" height="1.4" position="-0.75 0.7 0" color="#D4AF37"></a-cylinder>
-  <a-cylinder radius="0.02" height="1.4" position="0.75 0.7 0" color="#D4AF37"></a-cylinder>
-  <a-cylinder id="rail" radius="0.02" height="1.5" position="0 1.35 0" rotation="0 0 90" color="#D4AF37"></a-cylinder>
-
-  <a-entity position="-0.4 1.35 0">
-    <a-box width="0.45" height="0.02" depth="0.02" color="#F5F3DC"></a-box> <a-cylinder radius="0.005" height="0.05" position="0 0.03 0" color="#D4AF37"></a-cylinder> <a-image src="#black-vest" width="0.4" height="0.6" rotation="0 90 0" position="0 -0.35 0" transparent="true"></a-image>
-  </a-entity>
-
-  <a-entity position="-0.25 1.35 0">
-    <a-box width="0.45" height="0.02" depth="0.02" color="#F5F3DC"></a-box>
-    <a-cylinder radius="0.005" height="0.05" position="0 0.03 0" color="#D4AF37"></a-cylinder>
-    <a-image src="#green-vest" width="0.4" height="0.6" rotation="0 90 0" position="0 -0.35 0" transparent="true"></a-image>
-  </a-entity>
-
-  <a-entity position="0 1.35 0">
-    <a-box width="0.5" height="0.02" depth="0.02" color="#F5F3DC"></a-box>
-    <a-cylinder radius="0.005" height="0.05" position="0 0.03 0" color="#D4AF37"></a-cylinder>
-    <a-image src="#green-jacket" width="0.5" height="0.7" rotation="0 90 0" position="0 -0.4 0" transparent="true"></a-image>
-  </a-entity>
-
-  <a-entity position="0.25 1.35 0">
-    <a-box width="0.5" height="0.02" depth="0.02" color="#F5F3DC"></a-box>
-    <a-cylinder radius="0.005" height="0.05" position="0 0.03 0" color="#D4AF37"></a-cylinder>
-    <a-image src="#grey-jacket" width="0.5" height="0.7" rotation="0 90 0" position="0 -0.4 0" transparent="true"></a-image>
-  </a-entity>
-
-  <a-entity position="0.5 1.35 0">
-    <a-box width="0.5" height="0.02" depth="0.02" color="#F5F3DC"></a-box>
-    <a-cylinder radius="0.005" height="0.05" position="0 0.03 0" color="#D4AF37"></a-cylinder>
-    <a-image src="#brown-jacket" width="0.5" height="0.7" rotation="0 90 0" position="0 -0.4 0" transparent="true"></a-image>
+    <a-box width="0.04" height="1.140" depth="0.35" position="0 -0.861 0" color="#556B2F" src=#hiking-pants ></a-box>
+    <a-box width="0.04" height="1.140" depth="0.35" position="0.1 -0.861 0" color="#336454" src=#hiking-pants></a-box>
+    <a-box width="0.04" height="1.140" depth="0.35" position="0.2 -0.861 0" color="#556B2F" src=#hiking-pants></a-box>
+    <a-box width="0.04" height="1.140" depth="0.35" position="0.3 -0.861 0" color="#336454" src=#hiking-pants></a-box>
   </a-entity>
 </a-entity>
+
+<a-entity id="full-wall-display" position="0 1.500 0.913">
+  <a-entity id="black-vest" position="0.204 0.445 -2.796">
+    <a-cylinder radius="0.01" height="0.1" rotation="90 0 0" position="0 0.05 0" color="#D4AF37"></a-cylinder>
+    <a-image src="#black-vest" width="0.660" height="0.750" position="0 -0.233 -0.040" transparent="true" alpha-test="0.5"></a-image>
+  </a-entity>
+
+  <a-entity id="green-vest" position="0.785 -0.030 -2.773">
+    <a-cylinder radius="0.01" height="0.1" rotation="90 0 0" position="0.011 0.098 0.000" color="#D4AF37"></a-cylinder>
+    <a-image src="#green-vest" width="0.660" height="0.750" position="0.000 -0.196 -0.044" transparent="true" alpha-test="0.5"></a-image>
+  </a-entity>
+
+  <a-entity id="green-jacket" position="0.201 -0.422 -2.779">
+    <a-cylinder radius="0.01" height="0.1" rotation="90 0 0" position="0.023 0.004 0.000" color="#D4AF37"></a-cylinder>
+    <a-image src="#green-jacket" width="0.730" height="0.860" position="0.000 -0.289 -0.020" transparent="true" alpha-test="0.5"></a-image>
+  </a-entity>
+
+  <a-entity id="grey-jacket" position="1.314 0.469 -2.830">
+    <a-cylinder radius="0.01" height="0.1" rotation="90 0 0" position="0.016 -0.013 0" color="#D4AF37"></a-cylinder>
+    <a-image src="#grey-jacket" width="0.730" height="0.860" position="0.000 -0.300 -0.001" transparent="true" alpha-test="0.5"></a-image>
+  </a-entity>
+
+  <a-entity id="brown-jacket" position="1.357 -0.467 -2.809">
+    <a-cylinder radius="0.01" height="0.1" rotation="90 0 0" position="0 -0.010 0" color="#D4AF37"></a-cylinder>
+    <a-image src="#brown-jacket" width="0.730" height="0.860" position="0.000 -0.278 -0.038" transparent="true" alpha-test="0.5"></a-image>
+  </a-entity>
+</a-entity>
+
+<a-box id="bottom-base" width="0.910" height="0.08" depth="0.25" position="-2.690 1.559 -1.060" rotation="0 -90 0" color="#ffc87a" material="src: #plywood"></a-box>
+
 
 <a-entity light="type: ambient; color: #BBB"></a-entity>
 <a-entity light="type: directional; intensity: 0.6" position="-1 1 1"></a-entity>
