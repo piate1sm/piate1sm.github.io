@@ -22,6 +22,14 @@
         <img id="white-countertop" src="white_marble_gold.jpeg">
         <img id="curtain" src="terlenka_1k.blend/textures/terlenka_anisotropy_strength_1k.png">
       </a-assets>
+
+      <a-assets> 
+        <img id="black-vest" src="jackets/black-vest.png">
+        <img id="green-vest" src="jackets/green-vest.png">
+        <img id="green-jacket" src="jackets/green-jacket.png">
+        <img id="grey-jacket" src="jackets/grey-jacket.png">
+        <img id="brown-jacket" src="jackets/brown-jacket.png">
+      </a-assets>
       
 <a-entity id="main-flooring" position="0 0.01 0">
   <a-plane position="0.149 0.000 4.107" rotation="-90 90 0" width="5.470" height="10.480" 
@@ -544,14 +552,134 @@
     </a-box>
   </a-entity>
 
-        <a-entity light="type: ambient; color: #BBB"></a-entity>
-        <a-entity light="type: directional; intensity: 0.6" position="-1 1 1"></a-entity>
+<a-entity id="keyboard" position="-3.852 0.850 2.741" rotation="0 -90 0">
+    <a-box width="0.45" height="0.015" depth="0.15" color="#d1d1d1">
+    <a-box width="0.43" height="0.01" depth="0.13" position="0 0.01 0" color="#333"></a-box>
+    </a-box>
 
-      <a-entity id="rig" movement-controls="controls: gamepad,keyboard ; fly: true; speed: 0.3">
-        <a-entity id="head" camera position="0 1.6 0" look-controls></a-entity>
-        <a-entity laser-controls="hand: right"></a-entity>
-        <a-entity laser-controls="hand: left"></a-entity>
-      </a-entity>
+    <a-entity id="mouse" position="0.3 0 0">
+    <a-cylinder radius="0.03" height="0.02" color="#d1d1d1" scale="1 1 1.5">
+       <a-box width="0.005" height="0.01" depth="0.04" position="0 0.01 -0.01" color="#999"></a-box>
+    </a-cylinder>
+  </a-entity>
+</a-entity>
+
+<a-entity id="keyboard-2" position="-3.852 0.850 4.375" rotation="0 -90 0">
+    <a-box width="0.45" height="0.015" depth="0.15" color="#d1d1d1">
+    <a-box width="0.43" height="0.01" depth="0.13" position="0 0.01 0" color="#333"></a-box>
+    </a-box>
+
+    <a-entity id="mouse-2" position="0.3 0 0">
+    <a-cylinder radius="0.03" height="0.02" color="#d1d1d1" scale="1 1 1.5">
+       <a-box width="0.005" height="0.01" depth="0.04" position="0 0.01 -0.01" color="#999"></a-box>
+    </a-cylinder>
+  </a-entity>
+</a-entity>
+
+<a-entity id="luggage-20-carryon-ribbed" position="-2.233 0.000 0.074" rotation="0 -90 0">
+  <a-box width="0.36" height="0.51" depth="0.23" position="0 0.305 0" color="#074213" material="roughness: 0.5; metalness: 0.2; repeat: 8 1"
+         src="https://cdn.glitch.global/605e5651-7041-479c-8f3e-55c3c10a38b5/stripe_texture.png?163"></a-box>
+    <a-box width="0.37" height="0.05" depth="0.24" position="0 0.1 0" color="#A0522D"></a-box>
+    <a-box width="0.37" height="0.05" depth="0.24" position="0 0.490 0" color="#A0522D"></a-box>
+    <a-box width="0.15" height="0.02" depth="0.02" position="0 0.565 0" color="#A0522D"></a-box>
+    <a-cylinder radius="0.02" height="0.05" position="-0.12 0.025 0.08" color="#111"></a-cylinder>
+    <a-cylinder radius="0.02" height="0.05" position="0.12 0.025 0.08" color="#111"></a-cylinder>
+    <a-cylinder radius="0.02" height="0.05" position="0.12 0.025 -0.08" color="#111"></a-cylinder>
+    <a-cylinder radius="0.02" height="0.05" position="-0.12 0.025 -0.08" color="#111"></a-cylinder>
+</a-entity>
+
+<a-entity id="luggage-24-ribbed" position="-2.566 0.000 -0.221" rotation="0 -90 0">
+  <a-box width="0.42" height="0.65" depth="0.26" position="0 0.375 0" color="#074213" material="roughness: 0.5; metalness: 0.2; repeat: 10 1"
+         src="https://cdn.glitch.global/605e5651-7041-479c-8f3e-55c3c10a38b5/stripe_texture.png?163"></a-box>
+    <a-box width="0.43" height="0.05" depth="0.27" position="0 0.1 0" color="#A0522D"></a-box>
+    <a-box width="0.43" height="0.05" depth="0.27" position="0 0.624 0" color="#A0522D"></a-box>
+    <a-box width="0.18" height="0.02" depth="0.02" position="0 0.70 0" color="#A0522D"></a-box>
+    <a-cylinder radius="0.025" height="0.05" position="-0.15 0.025 0.1" color="#111"></a-cylinder>
+    <a-cylinder radius="0.025" height="0.05" position="0.15 0.025 0.1" color="#111"></a-cylinder>
+    <a-cylinder radius="0.025" height="0.05" position="0.150 0.025 -0.093" color="#111"></a-cylinder>
+    <a-cylinder radius="0.025" height="0.05" position="-0.160 0.025 -0.093" color="#111"></a-cylinder>
+</a-entity>
+
+<a-entity id="luggage-28-large" position="-2.560 0.000 0.415" rotation="0 -90 0">
+  <a-box width="0.49" height="0.70" depth="0.29" position="0 0.40 0" color="#074213" material="roughness: 0.5; metalness: 0.2; repeat: 12 1"
+         src="https://cdn.glitch.global/605e5651-7041-479c-8f3e-55c3c10a38b5/stripe_texture.png?163"></a-box>
+  <a-box width="0.50" height="0.05" depth="0.30" position="0 0.1 0" color="#A0522D"></a-box>
+  <a-box width="0.50" height="0.05" depth="0.30" position="0 0.685 0" color="#A0522D"></a-box>
+  <a-box width="0.22" height="0.02" depth="0.02" position="0 0.759 0" color="#A0522D"></a-box>
+  <a-cylinder radius="0.03" height="0.05" position="-0.18 0.025 0.11" color="#111"></a-cylinder>
+  <a-cylinder radius="0.03" height="0.05" position="0.18 0.025 0.11" color="#111"></a-cylinder>
+  <a-cylinder radius="0.03" height="0.05" position="0.18 0.025 -0.11" color="#111"></a-cylinder>
+  <a-cylinder radius="0.03" height="0.05" position="-0.18 0.025 -0.11" color="#111"></a-cylinder>
+</a-entity>
+
+<!-- <a-entity id="clothing-rack" position="0.149 0.000 4.107" rotation="0 90 0">
+  <a-cylinder id="leg-left" radius="0.02" height="1.6" position="-0.75 0.8 0" color="#D4AF37" metalness="0.180"></a-cylinder>
+  <a-cylinder id="leg-right" radius="0.02" height="1.6" position="0.75 0.8 0" color="#D4AF37" metalness="0.180"></a-cylinder>
+  <a-cylinder id="top-bar" radius="0.02" height="1.5" position="0 1.55 0" rotation="0 0 90" color="#D4AF37" metalness="0.180"></a-cylinder>
+  <a-box id="base-left" width="0.4" height="0.03" depth="0.05" position="-0.75 0.015 0" color="#D4AF37"></a-box>
+  <a-box id="base-right" width="0.4" height="0.03" depth="0.05" position="0.75 0.015 0" color="#D4AF37"></a-box>
+
+  <a-entity id="jeans-group" position="-0.5 1.5 0">
+    <a-box width="0.03" height="0.7" depth="0.3" position="0 -0.35 0" color="#1A2942"></a-box>
+    <a-box width="0.03" height="0.7" depth="0.3" position="0.08 -0.35 0" color="#23395d"></a-box>
+    <a-box width="0.03" height="0.7" depth="0.3" position="0.16 -0.35 0" color="#1A2942"></a-box>
+    <a-box width="0.03" height="0.7" depth="0.3" position="0.24 -0.35 0" color="#23395d"></a-box>
+  </a-entity>
+
+  <a-entity id="hiking-pants-group" position="0.15 1.5 0">
+    <a-box width="0.04" height="0.7" depth="0.35" position="0 -0.35 0" color="#556B2F"></a-box>
+    <a-box width="0.04" height="0.7" depth="0.35" position="0.1 -0.35 0" color="#336454"></a-box>
+    <a-box width="0.04" height="0.7" depth="0.35" position="0.2 -0.35 0" color="#556B2F"></a-box>
+    <a-box width="0.04" height="0.7" depth="0.35" position="0.3 -0.35 0" color="#336454"></a-box>
+  </a-entity>
+</a-entity> -->
+
+<a-entity id="luxury-closet-rack" position="-1 0 4">
+  <a-cylinder radius="0.02" height="1.4" position="-0.75 0.7 0" color="#D4AF37"></a-cylinder>
+  <a-cylinder radius="0.02" height="1.4" position="0.75 0.7 0" color="#D4AF37"></a-cylinder>
+  <a-cylinder id="rail" radius="0.02" height="1.5" position="0 1.35 0" rotation="0 0 90" color="#D4AF37"></a-cylinder>
+
+  <a-entity position="-0.4 1.35 0">
+    <a-box width="0.45" height="0.02" depth="0.02" color="#F5F3DC"></a-box> <a-cylinder radius="0.005" height="0.05" position="0 0.03 0" color="#D4AF37"></a-cylinder> <a-image src="#black-vest" width="0.4" height="0.6" rotation="0 90 0" position="0 -0.35 0" transparent="true"></a-image>
+  </a-entity>
+
+  <a-entity position="-0.25 1.35 0">
+    <a-box width="0.45" height="0.02" depth="0.02" color="#F5F3DC"></a-box>
+    <a-cylinder radius="0.005" height="0.05" position="0 0.03 0" color="#D4AF37"></a-cylinder>
+    <a-image src="#green-vest" width="0.4" height="0.6" rotation="0 90 0" position="0 -0.35 0" transparent="true"></a-image>
+  </a-entity>
+
+  <a-entity position="0 1.35 0">
+    <a-box width="0.5" height="0.02" depth="0.02" color="#F5F3DC"></a-box>
+    <a-cylinder radius="0.005" height="0.05" position="0 0.03 0" color="#D4AF37"></a-cylinder>
+    <a-image src="#green-jacket" width="0.5" height="0.7" rotation="0 90 0" position="0 -0.4 0" transparent="true"></a-image>
+  </a-entity>
+
+  <a-entity position="0.25 1.35 0">
+    <a-box width="0.5" height="0.02" depth="0.02" color="#F5F3DC"></a-box>
+    <a-cylinder radius="0.005" height="0.05" position="0 0.03 0" color="#D4AF37"></a-cylinder>
+    <a-image src="#grey-jacket" width="0.5" height="0.7" rotation="0 90 0" position="0 -0.4 0" transparent="true"></a-image>
+  </a-entity>
+
+  <a-entity position="0.5 1.35 0">
+    <a-box width="0.5" height="0.02" depth="0.02" color="#F5F3DC"></a-box>
+    <a-cylinder radius="0.005" height="0.05" position="0 0.03 0" color="#D4AF37"></a-cylinder>
+    <a-image src="#brown-jacket" width="0.5" height="0.7" rotation="0 90 0" position="0 -0.4 0" transparent="true"></a-image>
+  </a-entity>
+</a-entity>
+
+<a-entity light="type: ambient; color: #BBB"></a-entity>
+<a-entity light="type: directional; intensity: 0.6" position="-1 1 1"></a-entity>
+
+<a-entity id="rig" movement-controls="controls: gamepad,keyboard ; fly: true; speed: 0.3">
+  <a-entity id="head" camera position="0 1.6 0" look-controls></a-entity>
+  <a-entity laser-controls="hand: right"></a-entity>
+  <a-entity laser-controls="hand: left"></a-entity>
+</a-entity>
+
+<a-entity id="rig" position="8.5 0 5.8" rotation="0 90 0">
+  <a-camera look-controls wasd-controls></a-camera>
+</a-entity>
 
     </a-scene>
   </body>
