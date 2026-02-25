@@ -38,7 +38,12 @@
         <img id="hiking-pants" src="Pants/hiking-pants.png">
       </assets>
 
-      
+      <assets>
+        <img id="black-shoe" src="Shoes/black-shoe.png">
+        <img id="brown-shoe" src="Shoes/brown-shoe.png">
+        <img id="tan-shoe" src="Shoes/tan-shoes.png">
+        <img id="green-shoe" src="Shoes/green-shoe.png">
+      </assets>
       
 <a-entity id="main-flooring" position="0 0.01 0">
   <a-plane position="0.149 0.000 4.107" rotation="-90 90 0" width="5.470" height="10.480" 
@@ -329,13 +334,9 @@
         
    <a-entity id="sign-area" position="0 2.85 0.1">
       <a-box width="1.330" height="0.7" depth="0.430" position="0 -0.005 -0.165" color="#f7f5e6"></a-box>
-      
       <a-box id="sign-panel-front" width="1.280" height="0.5" depth="0.02" position="0 0 0.06" color="#f0f0f0"></a-box>
       <a-box id="sign-cornice-front" width="1.500" height="0.100" depth="0.100" position="0 0.330 0.104" color="#f7f5e6"></a-box>
-   
       <a-box id="sign-panel-back" width="1.280" height="0.5" depth="0.02" position="0 0 -0.383" color="#f0f0f0"></a-box>
-      <!-- <a-box id="sign-cornice-back" width="1.500" height="0.100" depth="0.100" position="0 0.330 -0.383" color="#f7f5e6"></a-box> -->
-
       <a-box width="1.340" height="0.02" depth="0.500" position="0 -0.346 -0.145" color="#eeeeee"></a-box>
    </a-entity>
 
@@ -456,8 +457,9 @@
 </a-entity>
 
 <a-entity id="retail-cabinet" position="-1.366 0.000 -1.820" rotation="0 0 0">
+  <a-box id="crown-molding" width="1.85" height="0.12" depth="0.3" position="0 2.15 0.02" color="#ffc87a" material="src: #plywood"></a-box>
   <a-box width="1.78" height="2.13" depth="0.02" position="0 1.065 -0.12" color="#ffc87a" material="src: #plywood"></a-box>
-  
+
   <a-box id="side-left" width="0.04" height="2.13" depth="0.25" position="-0.87 1.065 0" color="#ffc87a" material="src: #plywood"></a-box>
   <a-box id="side-right" width="0.04" height="2.13" depth="0.25" position="0.87 1.065 0" color="#ffc87a" material="src: #plywood"></a-box>
   
@@ -470,9 +472,31 @@
   <a-box width="1.70" height="0.02" depth="0.23" position="0 0.5 -0.01" color="#ffc87a" material="src: #plywood"></a-box>
   <a-box width="1.70" height="0.02" depth="0.23" position="0 1.0 -0.01" color="#ffc87a" material="src: #plywood"></a-box>
   <a-box width="1.70" height="0.02" depth="0.23" position="0 1.5 -0.01" color="#ffc87a" material="src: #plywood"></a-box>
+
+  <a-box id="pedestal" width="0.360" height="0.030" depth="0.130" position="0.028 1.534 -0.000" rotation="0 0 0" color="#ffc87a" material="src: #black-countertop"></a-box>
+  <a-box id="pedestal-2" width="0.360" height="0.030" depth="0.130" position="-0.593 1.026 -0.031" rotation="0 0 0" color="#ffc87a" material="src: #black-countertop"></a-box>
+  <a-box id="pedestal-3" width="0.360" height="0.030" depth="0.130" position="0.564 0.520 0.015" rotation="0 0 0" color="#ffc87a" material="src: #black-countertop"></a-box>
+  <a-box id="pedestal-4" width="0.360" height="0.030" depth="0.130" position="0.028 0.081 0.041" rotation="0 0 0" color="#ffc87a" material="src: #black-countertop"></a-box>
+
+<a-plane position="-0.58 1.8 -0.1" width="0.54" height="0.55" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0 1.8 -0.1" width="0.54" height="0.55" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0.58 1.8 -0.1" width="0.54" height="0.55" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+
+<a-plane position="-0.58 1.25 -0.1" width="0.54" height="0.45" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0 1.25 -0.1" width="0.54" height="0.45" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0.58 1.25 -0.1" width="0.54" height="0.45" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+
+<a-plane position="-0.58 0.75 -0.1" width="0.54" height="0.45" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0 0.75 -0.1" width="0.54" height="0.45" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0.58 0.75 -0.1" width="0.54" height="0.45" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+
+<a-plane position="-0.58 0.25 -0.1" width="0.54" height="0.4" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0 0.25 -0.1" width="0.54" height="0.4" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0.58 0.25 -0.1" width="0.54" height="0.4" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
 </a-entity>
 
 <a-entity id="retail-cabinet-2" position="1.060 0.000 9.343" rotation="0 180 0">
+  <a-box id="crown-molding" width="1.85" height="0.12" depth="0.3" position="0 2.15 0.02" color="#ffc87a" material="src: #plywood"></a-box>
   <a-box width="1.78" height="2.13" depth="0.02" position="0 1.065 -0.12" color="#ffc87a" material="src: #plywood"></a-box>
   
   <a-box id="side-left" width="0.04" height="2.13" depth="0.25" position="-0.87 1.065 0" color="#ffc87a" material="src: #plywood"></a-box>
@@ -487,6 +511,27 @@
   <a-box width="1.70" height="0.02" depth="0.23" position="0 0.5 -0.01" color="#ffc87a" material="src: #plywood"></a-box>
   <a-box width="1.70" height="0.02" depth="0.23" position="0 1.0 -0.01" color="#ffc87a" material="src: #plywood"></a-box>
   <a-box width="1.70" height="0.02" depth="0.23" position="0 1.5 -0.01" color="#ffc87a" material="src: #plywood"></a-box>
+
+  <a-plane position="-0.58 1.8 -0.1" width="0.54" height="0.55" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0 1.8 -0.1" width="0.54" height="0.55" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0.58 1.8 -0.1" width="0.54" height="0.55" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+
+<a-plane position="-0.58 1.25 -0.1" width="0.54" height="0.45" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0 1.25 -0.1" width="0.54" height="0.45" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0.58 1.25 -0.1" width="0.54" height="0.45" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+
+<a-plane position="-0.58 0.75 -0.1" width="0.54" height="0.45" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0 0.75 -0.1" width="0.54" height="0.45" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0.58 0.75 -0.1" width="0.54" height="0.45" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+
+<a-plane position="-0.58 0.25 -0.1" width="0.54" height="0.4" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0 0.25 -0.1" width="0.54" height="0.4" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+<a-plane position="0.58 0.25 -0.1" width="0.54" height="0.4" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
+
+<!-- <a-box id="pedestal" width="0.360" height="0.030" depth="0.130" position="0.028 1.534 -0.000" rotation="0 0 0" color="#ffff" material="src: #white-countertop"></a-box>
+  <a-box id="pedestal-2" width="0.360" height="0.030" depth="0.130" position="-0.593 1.026 -0.031" rotation="0 0 0" color="#ffff" material="src: #white-countertop"></a-box>
+  <a-box id="pedestal-3" width="0.360" height="0.030" depth="0.130" position="0.564 0.520 0.015" rotation="0 0 0" color="#ffff" material="src: #white-countertop"></a-box>
+  <a-box id="pedestal-4" width="0.360" height="0.030" depth="0.130" position="0.028 0.081 0.041" rotation="0 0 0" color="#ffff" material="src: #white-countertop"></a-box> -->
 </a-entity>
 
 <a-entity id="ionic-column-group">
@@ -670,7 +715,26 @@
   </a-entity>
 </a-entity>
 
-<a-box id="bottom-base" width="0.910" height="0.08" depth="0.25" position="-2.690 1.559 -1.060" rotation="0 -90 0" color="#ffc87a" material="src: #plywood"></a-box>
+<a-box id="shelf" width="0.910" height="0.08" depth="0.25" position="-2.690 1.559 -1.060" rotation="0 -90 0" color="#ffc87a" material="src: #plywood"></a-box>
+
+<a-entity id="green-shoe" position="-1.335 1.991 -1.777">
+    <a-image src="#green-shoe" width="0.340" height="0.390" position="0.000 -0.278 -0.038" transparent="true" alpha-test="0.5"></a-image>
+</a-entity>
+
+<a-entity id="tan-shoe" position="-1.944 1.479 -1.777">
+    <a-image src="#tan-shoe" width="0.340" height="0.390" position="0.000 -0.278 -0.038" transparent="true" alpha-test="0.5"></a-image>
+</a-entity>
+
+<a-entity id="black-shoe" position="-0.801 0.973 -1.722">
+    <a-image src="#black-shoe" width="0.340" height="0.390" position="0.000 -0.278 -0.038" transparent="true" alpha-test="0.5"></a-image>
+</a-entity>
+
+<a-entity id="brown-shoe" position="-1.278 0.545 -1.775" rotation="0 180 0">
+    <a-image src="#brown-shoe" width="0.340" height="0.390" position="0.000 -0.278 0.007" transparent="true" alpha-test="0.5"></a-image>
+    <a-image src="#brown-shoe" width="0.340" height="0.390" position="0.101 -0.294 -0.016" transparent="true" alpha-test="0.5"></a-image>
+</a-entity>
+
+
 
 
 <a-entity light="type: ambient; color: #BBB"></a-entity>
