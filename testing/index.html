@@ -138,6 +138,67 @@
 
       
 
+
+<a-entity id="hurricane-lantern-refined" position="0 0.8 -1">
+  
+  <a-cylinder radius="0.08" height="0.01" color="#331A00"></a-cylinder>
+  <a-cylinder radius="0.07" height="0.05" position="0 0.03 0" color="#5D3A1A"></a-cylinder>
+  <a-cylinder radius="0.04" height="0.02" position="0 0.06 0" color="#331A00"></a-cylinder>
+
+  <a-cone 
+    radius-bottom="0.045" radius-top="0.03" height="0.14" 
+    position="0 0.13 0" 
+    material="color: #FFF; opacity: 0.2; transparent: true; side: double">
+  </a-cone>
+
+  <a-torus 
+    radius="0.1" radius-tubular="0.007" arc="140" 
+    rotation="0 180 110" position="-0.006 0.12 0" color="#5D3A1A">
+  </a-torus>
+  
+  <a-torus 
+    radius="0.1" radius-tubular="0.007" arc="140" 
+    rotation="0 180 -70" position="0.009 0.12 0" color="#5D3A1A">
+  </a-torus>
+
+  <a-cylinder radius="0.035" height="0.06" position="0 0.22 0" color="#5D3A1A"></a-cylinder>
+  <a-cylinder radius="0.045" height="0.01" position="0 0.25 0" color="#331A00"></a-cylinder>
+  <a-sphere radius="0.01" position="0 0.265 0" color="#5D3A1A"></a-sphere>
+
+  <a-torus radius="0.046" radius-tubular="0.002" position="0 0.11 0" rotation="90 0 0" color="#222"></a-torus>
+  <a-torus radius="0.04" radius-tubular="0.002" position="0 0.15 0" rotation="90 0 0" color="#222"></a-torus>
+
+</a-entity>
+
+<a-entity id="pants-hanger-fixed" position="0 1.5 -1">
+  <a-box width="0.35" height="0.04" depth="0.02" color="#8B4513" material="roughness: 0.8"></a-box>
+  <a-box width="0.35" height="0.04" depth="0.02" position="0 0 0.025" color="#A0522D" material="roughness: 0.8"></a-box>
+  <a-cylinder radius="0.003" height="0.06" position="0 0.03 0.01" color="#333"></a-cylinder>
+  <a-box width="0.01" height="0.05" depth="0.05" position="0.08 0 0.012" color="#333"></a-box>
+  <a-box width="0.01" height="0.05" depth="0.05" position="-0.08 0 0.012" color="#333"></a-box>
+</a-entity>
+
+<a-entity id="large-lidded-candles" position="-2.4 1.706 -1.2">
+  <a-entity position="0 0 0" scale="1.000 0.610 1.000">
+    <a-cylinder radius="0.06" height="0.15" color="#F5F5DC" material="opacity: 1.0"></a-cylinder>
+    <a-cylinder radius="0.065" height="0.01" position="0 0.076 0" color="#5D3A1A"></a-cylinder>
+  </a-entity>
+</a-entity>
+
+<a-entity id="small-lidded-votives" position="-2.8 1.706 -1.1">
+  <a-entity position="0.14 0 0.05" scale="0.700 0.690 0.700">
+    <a-cylinder radius="0.06" height="0.1" color="#F5F5DC" position="0 -0.025 0"></a-cylinder>
+    <a-cylinder radius="0.065" height="0.01" position="0 0.026 0" color="#5D3A1A"></a-cylinder>
+  </a-entity>
+  </a-entity>
+
+<a-entity id="square-oil-bottle" position="-0.000 0.913 0.000">
+  <a-box width="0.08" height="0.260" depth="0.08" color="#cdc832" material="opacity: 0.4; transparent: true; side: double; metalness: 0.5; roughness: 0.1"></a-box>
+  <a-cylinder height="0.06" radius="0.017" position="0 0.160 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+   <a-cylinder height="0.020" radius="0.030" position="0 0.179 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+  <a-cylinder height="0.050" radius="0.016" position="0 0.186 0" color="#C2A278"></a-cylinder>
+</a-entity>
+
       <a-entity id="rig" movement-controls="speed: 0.15">
         <a-entity camera position="0 1.6 2" look-controls></a-entity>
       </a-entity>
