@@ -62,6 +62,10 @@
 
       <a-assets>
         <a-asset-item id="athena-model" src="athena3.glb"></a-asset-item>
+        <a-asset-item id="light-blue-pillow" src="Pillows/light-blue-pillow.glb"></a-asset-item>
+        <a-asset-item id="green-pillow" src="Pillows/green-pillow.glb"></a-asset-item>
+        <a-asset-item id="beige-pillow" src="Pillows/beige-pillow.glb"></a-asset-item>
+        <a-asset-item id="yellow-blankets" src="yellow-blankets.glb"></a-asset-item>  
       </a-assets>
       
       <a-assets>
@@ -84,7 +88,9 @@
         <img id="calypso-label" src="stationary/calypso-label.png">
         <img id="ithica-label" src="stationary/ithica-label.png">
         <img id="wine-dark-sea-label" src="stationary/wine-dark-sea-label.png">
-
+        <img id="door-sign" src="stationary/door-sign.png">
+        <img id="sign-logo" src="stationary/sign-logo.png">
+        <img id="logo-symbol" src="stationary/logo-symbol.png">
       </a-assets>
 
 <a-entity id="main-flooring" position="0 0.01 0">
@@ -126,6 +132,7 @@
   <a-box width="5.486" height="2.59" depth="0.05" position="0 0 -0.025" material="color: #f7f5e6"></a-box>
   <a-box width="5.426" height="2.59" depth="0.05" position="0 0 -0.086" src="#backsplash" 
          material="repeat: 8 2"></a-box>
+  <a-image src="#logo-symbol" width="1.570" height="0.750" position="-0.022 0.577 -0.119" transparent="true" alpha-test="0.5"></a-image>
 </a-entity>
 
 <a-entity id="wall-9ft-6in3" position="-3.753 1.295 6.882" rotation="0 0 0">
@@ -381,6 +388,8 @@
       <a-box id="sign-panel-front" width="1.280" height="0.5" depth="0.02" position="0 0 0.06" color="#f0f0f0"></a-box>
       <a-box id="sign-cornice-front" width="1.500" height="0.100" depth="0.100" position="0 0.330 0.104" color="#f7f5e6"></a-box>
       <a-box id="sign-panel-back" width="1.280" height="0.5" depth="0.02" position="0 0 -0.383" color="#f0f0f0"></a-box>
+      <a-box id="sign-panel-back" width="1.280" height="0.5" depth="0.02" position="0 0 -0.383" color="#f0f0f0" 
+      material="src: #sign-logo; side: flat; transparent: true; roughness: 1;"></a-box>
       <a-box width="1.340" height="0.02" depth="0.500" position="0 -0.346 -0.145" color="#eeeeee"></a-box>
    </a-entity>
 
@@ -457,7 +466,8 @@
               <a-entity id="door-L" position="-0.330 0 0.075">
                  <a-box width="0.680" height="2.540" depth="0.06" position="0 0.082 0" color="#f7f5e6">
                     <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
-                    <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
+                    <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true" ></a-box>
+                    <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="src: #door-sign; side: flat; transparent: true; roughness: 1;"></a-box>
                     <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 0.03" color="#f0f0f0"></a-box>
                     <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 -0.03" color="#f0f0f0"></a-box>
                  </a-box>
@@ -556,8 +566,8 @@
   <a-box id="top-shelf" width="1.78" height="0.04" depth="0.25" position="0 2.11 0" color="#ffc87a" material="src: #plywood"></a-box>
   <a-box id="bottom-base" width="1.78" height="0.08" depth="0.25" position="0 0.04 0" color="#ffc87a" material="src: #plywood"></a-box>
 
-  <a-box width="0.03" height="2.03" depth="0.23" position="-0.3 1.065 -0.01" color="#ffc87a" material="src: #plywood"opacity="0.9"></a-box>
-  <a-box width="0.03" height="2.03" depth="0.23" position="0.3 1.065 -0.01" color="#ffc87a" material="src: #plywood" opacity="0.9"></a-box>
+  <a-box width="0.03" height="2.03" depth="0.23" position="-0.3 1.065 -0.01" color="#ffc87a" material="src: #plywood"opacity="1.000"></a-box>
+  <a-box width="0.03" height="2.03" depth="0.23" position="0.3 1.065 -0.01" color="#ffc87a" material="src: #plywood" opacity="1.000"></a-box>
 
   <a-box width="1.70" height="0.02" depth="0.23" position="0 0.5 -0.01" color="#ffc87a" material="src: #plywood"></a-box>
   <a-box width="1.70" height="0.02" depth="0.23" position="0 1.0 -0.01" color="#ffc87a" material="src: #plywood"></a-box>
@@ -578,11 +588,6 @@
 <a-plane position="-0.58 0.25 -0.1" width="0.54" height="0.4" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
 <a-plane position="0 0.25 -0.1" width="0.54" height="0.4" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
 <a-plane position="0.58 0.25 -0.1" width="0.54" height="0.4" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
-
-<!-- <a-box id="pedestal" width="0.360" height="0.030" depth="0.130" position="0.028 1.534 -0.000" rotation="0 0 0" color="#ffff" material="src: #white-countertop"></a-box>
-  <a-box id="pedestal-2" width="0.360" height="0.030" depth="0.130" position="-0.593 1.026 -0.031" rotation="0 0 0" color="#ffff" material="src: #white-countertop"></a-box>
-  <a-box id="pedestal-3" width="0.360" height="0.030" depth="0.130" position="0.564 0.520 0.015" rotation="0 0 0" color="#ffff" material="src: #white-countertop"></a-box>
-  <a-box id="pedestal-4" width="0.360" height="0.030" depth="0.130" position="0.028 0.081 0.041" rotation="0 0 0" color="#ffff" material="src: #white-countertop"></a-box> -->
 </a-entity>
 
 <a-entity id="ionic-column-group">
@@ -623,6 +628,7 @@
           material="src: #plywood; repeat: 1 1; roughness: 0.6"></a-box>
     <a-box width="3.670" height="0.040" depth="0.520" position="0.031 0.830 -0.111" 
           material="src: #white-countertop; repeat: 1 1; roughness: 0.2; metalness: 0.1"></a-box>
+    <a-image src="#sign-logo" width="2.360" height="0.860" position="0.000 0.386 0.133" color="#d6ceb3" transparent="true" alpha-test="0.5"></a-image>
 </a-entity>
 
 <a-entity id="computer" position="-3.675 0.859 2.727" rotation="0 -90 0">
@@ -1279,46 +1285,83 @@
   </a-entity>
 </a-entity>
 
-<a-entity id="square-oil-bottle" position="-1.221 0.982 9.811">
-  <a-box width="0.08" height="0.260" depth="0.08" color="#cdc832" material="opacity: 0.4; transparent: true; side: double; metalness: 0.5; roughness: 0.1"></a-box>
-  <a-cylinder height="0.06" radius="0.017" position="0 0.160 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
-   <a-cylinder height="0.020" radius="0.030" position="0 0.179 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
-  <a-cylinder height="0.050" radius="0.016" position="0 0.186 0" color="#C2A278"></a-cylinder>
+<a-entity id="oil-bottle-group" position="0 0 0">
+  <a-entity id="square-oil-bottle-1" position="-1.221 0.982 9.811">
+    <a-box width="0.08" height="0.26" depth="0.08" color="#cdc832" material="opacity: 0.4; transparent: true; side: double; metalness: 0.5; roughness: 0.1"></a-box>
+    <a-cylinder height="0.06" radius="0.017" position="0 0.16 0" color="#cdcbcb" material="opacity: 0.67; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+    <a-cylinder height="0.02" radius="0.03" position="0 0.179 0" color="#cdcbcb" material="opacity: 0.67; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+    <a-cylinder height="0.05" radius="0.016" position="0 0.186 0" color="#C2A278"></a-cylinder>
+  </a-entity>
+
+  <a-entity id="square-oil-bottle-2" position="-1.438 0.982 9.806">
+    <a-box width="0.08" height="0.26" depth="0.08" color="#cdc832" material="opacity: 0.4; transparent: true; side: double; metalness: 0.5; roughness: 0.1"></a-box>
+    <a-cylinder height="0.06" radius="0.017" position="0 0.16 0" color="#cdcbcb" material="opacity: 0.67; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+    <a-cylinder height="0.02" radius="0.03" position="0 0.179 0" color="#cdcbcb" material="opacity: 0.67; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+    <a-cylinder height="0.05" radius="0.016" position="0 0.186 0" color="#C2A278"></a-cylinder>
+  </a-entity>
+
+  <a-entity id="square-oil-bottle-3" position="-1.222 0.982 9.580">
+    <a-box width="0.08" height="0.26" depth="0.08" color="#cdc832" material="opacity: 0.4; transparent: true; side: double; metalness: 0.5; roughness: 0.1"></a-box>
+    <a-cylinder height="0.06" radius="0.017" position="0 0.16 0" color="#cdcbcb" material="opacity: 0.67; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+    <a-cylinder height="0.02" radius="0.03" position="0 0.179 0" color="#cdcbcb" material="opacity: 0.67; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+    <a-cylinder height="0.05" radius="0.016" position="0 0.186 0" color="#C2A278"></a-cylinder>
+  </a-entity>
+
+  <a-entity id="square-oil-bottle-4" position="-1.423 0.982 9.580">
+    <a-box width="0.08" height="0.26" depth="0.08" color="#cdc832" material="opacity: 0.4; transparent: true; side: double; metalness: 0.5; roughness: 0.1"></a-box>
+    <a-cylinder height="0.06" radius="0.017" position="0 0.16 0" color="#cdcbcb" material="opacity: 0.67; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+    <a-cylinder height="0.02" radius="0.03" position="0 0.179 0" color="#cdcbcb" material="opacity: 0.67; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+    <a-cylinder height="0.05" radius="0.016" position="0 0.186 0" color="#C2A278"></a-cylinder>
+  </a-entity>
+
+  <a-entity id="square-oil-bottle-5" position="-1.423 0.982 9.374">
+    <a-box width="0.08" height="0.26" depth="0.08" color="#cdc832" material="opacity: 0.4; transparent: true; side: double; metalness: 0.5; roughness: 0.1"></a-box>
+    <a-cylinder height="0.06" radius="0.017" position="0 0.16 0" color="#cdcbcb" material="opacity: 0.67; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+    <a-cylinder height="0.02" radius="0.03" position="0 0.179 0" color="#cdcbcb" material="opacity: 0.67; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+    <a-cylinder height="0.05" radius="0.016" position="0 0.186 0" color="#C2A278"></a-cylinder>
+  </a-entity>
+
+  <a-entity id="square-oil-bottle-6" position="-1.228 0.982 9.374">
+    <a-box width="0.08" height="0.26" depth="0.08" color="#cdc832" material="opacity: 0.4; transparent: true; side: double; metalness: 0.5; roughness: 0.1"></a-box>
+    <a-cylinder height="0.06" radius="0.017" position="0 0.16 0" color="#cdcbcb" material="opacity: 0.67; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+    <a-cylinder height="0.02" radius="0.03" position="0 0.179 0" color="#cdcbcb" material="opacity: 0.67; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
+    <a-cylinder height="0.05" radius="0.016" position="0 0.186 0" color="#C2A278"></a-cylinder>
+  </a-entity>
 </a-entity>
 
-<a-entity id="square-oil-bottle-2" position="-1.438 0.982 9.806">
-  <a-box width="0.08" height="0.260" depth="0.08" color="#cdc832" material="opacity: 0.4; transparent: true; side: double; metalness: 0.5; roughness: 0.1"></a-box>
-  <a-cylinder height="0.06" radius="0.017" position="0 0.160 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
-   <a-cylinder height="0.020" radius="0.030" position="0 0.179 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
-  <a-cylinder height="0.050" radius="0.016" position="0 0.186 0" color="#C2A278"></a-cylinder>
+<a-entity
+    gltf-model="#yellow-blankets"
+    position="-3.354 1.230 11.784" 
+    rotation="0 180 0"
+    scale="1.600 1.530 0.680">
 </a-entity>
 
-<a-entity id="square-oil-bottle-3" position="-1.222 0.982 9.580">
-  <a-box width="0.08" height="0.260" depth="0.08" color="#cdc832" material="opacity: 0.4; transparent: true; side: double; metalness: 0.5; roughness: 0.1"></a-box>
-  <a-cylinder height="0.06" radius="0.017" position="0 0.160 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
-   <a-cylinder height="0.020" radius="0.030" position="0 0.179 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
-  <a-cylinder height="0.050" radius="0.016" position="0 0.186 0" color="#C2A278"></a-cylinder>
+<a-entity
+    gltf-model="#yellow-blankets"
+    position="-2.767 1.733 11.754" 
+    rotation="0 180 0"
+    scale="1.600 1.530 0.680">
 </a-entity>
 
-<a-entity id="square-oil-bottle-4" position="-1.423 0.982 9.580">
-  <a-box width="0.08" height="0.260" depth="0.08" color="#cdc832" material="opacity: 0.4; transparent: true; side: double; metalness: 0.5; roughness: 0.1"></a-box>
-  <a-cylinder height="0.06" radius="0.017" position="0 0.160 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
-   <a-cylinder height="0.020" radius="0.030" position="0 0.179 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
-  <a-cylinder height="0.050" radius="0.016" position="0 0.186 0" color="#C2A278"></a-cylinder>
+<a-entity
+    gltf-model="#yellow-blankets"
+    position="-3.960 0.735 11.784" 
+    rotation="0 180 0"
+    scale="1.600 1.530 0.680">
 </a-entity>
 
-<a-entity id="square-oil-bottle-5" position="-1.423 0.982 9.374">
-  <a-box width="0.08" height="0.260" depth="0.08" color="#cdc832" material="opacity: 0.4; transparent: true; side: double; metalness: 0.5; roughness: 0.1"></a-box>
-  <a-cylinder height="0.06" radius="0.017" position="0 0.160 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
-   <a-cylinder height="0.020" radius="0.030" position="0 0.179 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
-  <a-cylinder height="0.050" radius="0.016" position="0 0.186 0" color="#C2A278"></a-cylinder>
+<a-entity
+    gltf-model="#light-blue-pillow"
+    position="-0.113 1.893 5.829" 
+    rotation="-90 -70 0"
+    scale="0.630 0.470 0.390">
 </a-entity>
 
-<a-entity id="square-oil-bottle-6" position="-1.228 0.982 9.374">
-  <a-box width="0.08" height="0.260" depth="0.08" color="#cdc832" material="opacity: 0.4; transparent: true; side: double; metalness: 0.5; roughness: 0.1"></a-box>
-  <a-cylinder height="0.06" radius="0.017" position="0 0.160 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
-   <a-cylinder height="0.020" radius="0.030" position="0 0.179 0" color="#cdcbcb" material="opacity: 0.670; transparent: true; side: front; metalness: 0; roughness: 1"></a-cylinder>
-  <a-cylinder height="0.050" radius="0.016" position="0 0.186 0" color="#C2A278"></a-cylinder>
+<a-entity
+    gltf-model="#green-pillow"
+    position="-0.113 1.893 5.829" 
+    rotation="-90 -70 0"
+    scale="0.630 0.470 0.390">
 </a-entity>
 
 <a-entity id="rig" movement-controls="controls: gamepad,keyboard ; fly: true; speed: 0.3">
