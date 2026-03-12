@@ -66,7 +66,8 @@
         <a-asset-item id="light-blue-pillow" src="Pillows/light-blue-pillow.glb"></a-asset-item>
         <a-asset-item id="green-pillow" src="Pillows/green-pillow.glb"></a-asset-item>
         <a-asset-item id="beige-pillow" src="Pillows/beige-pillow.glb"></a-asset-item>
-        <a-asset-item id="yellow-blankets" src="yellow-blankets.glb"></a-asset-item>  
+        <a-asset-item id="yellow-blankets" src="yellow-blankets.glb"></a-asset-item>
+        <a-asset-item id="white-column" src="white-column.glb"></a-asset-item>
       </a-assets>
       
       <a-assets>
@@ -95,6 +96,7 @@
         <img id="calypso-label" src="stationary/calypso-label.png">
         <img id="ithica-label" src="stationary/ithica-label.png">
         <img id="wine-dark-sea-label" src="stationary/wine-dark-sea-label.png">
+        <img id="box-logo" src="stationary/box-logo.png">
       </a-assets>
 
 <a-entity id="main-flooring" position="0 0.01 0">
@@ -136,7 +138,7 @@
   <a-box width="5.486" height="2.59" depth="0.05" position="0 0 -0.025" material="color: #f7f5e6"></a-box>
   <a-box width="5.426" height="2.59" depth="0.05" position="0 0 -0.086" src="#Blue-tiles" 
          material="repeat: 10.8 5.2"></a-box>
-  <a-image src="#logo-symbol" width="1.570" height="0.750" position="-0.022 0.577 -0.119" transparent="true" alpha-test="0.5"></a-image>
+  <a-image src="#logo-symbol" width="1.570" height="0.750" position="-0.080 0.577 -0.119" transparent="true" alpha-test="0.5"></a-image>
 </a-entity>
 
 <a-entity id="wall-9ft-6in3" position="-3.753 1.295 6.882" rotation="0 0 0">
@@ -595,7 +597,7 @@
 <a-plane position="0.58 0.25 -0.1" width="0.54" height="0.4" color="#D4AF37" material="shader: flat; opacity: 0.2"></a-plane>
 </a-entity>
 
-<a-entity id="ionic-column-group">
+<!-- <a-entity id="ionic-column-group">
   <a-entity id="ionic-column-1" position="-5.358 0 1.492" rotation="0 90 0">
     <a-box width="0.45" height="0.1" depth="0.45" position="0 0.05 0" color="#f7f5e6"></a-box>
     <a-cylinder radius="0.15" height="2.4" position="0 1.25 0" color="#f7f5e6" segments-radial="12"></a-cylinder>
@@ -619,12 +621,12 @@
       <a-box width="0.45" height="0.05" depth="0.45" position="0 0.12 0" color="#f7f5e6"></a-box>
     </a-entity>
   </a-entity>
-</a-entity>
+</a-entity> -->
 
 <a-entity id="back-checkout-counter" position="-5.217 0.000 3.617" rotation="0 90 0">
     <a-box width="3.680" height="0.810" depth="0.480" position="0.030 0.423 -0.118" color="#ffc87a" 
           material="src: #plywood; repeat: 1 1; roughness: 0.6"></a-box>
-    <a-box width="3.670" height="0.040" depth="0.520" position="0.025 0.830 -0.111" 
+    <a-box width="3.710" height="0.040" depth="0.520" position="0.025 0.830 -0.111" 
           material="src: #white-countertop; repeat: 1 1; roughness: 0.2; metalness: 0.1"></a-box>
 </a-entity>
 
@@ -1663,7 +1665,7 @@
   </a-ring>
 </a-entity>
 
-<a-entity id="bracelet-flat" position="0.695 0.914 7.984" rotation="-90 0 0" scale="0.060 0.080 0.090">
+<a-entity id="bracelet-1" position="0.695 0.914 7.984" rotation="-90 0 0" scale="0.060 0.080 0.090">
   <a-torus position="-1.162 0.000 -0.038" color="#D4AF37" radius="0.5" radius-tubular="0.03" scale="0.4 1 0.2" rotation="0 0 90" material="metalness:0.530; roughness:0.2"></a-torus>
   <a-sphere position="-0.570 0.000 -0.044" color="#FFFFFF" radius="0.12" scale="1.000 1.000 0.710" material="roughness:0.05; src: #pearl-texture"></a-sphere>
 
@@ -1675,6 +1677,205 @@
 
   <a-torus position="2.325 -0.036 0.000" rotation="0 0 90" color="#D4AF37" radius="0.5" radius-tubular="0.03" scale="0.4 1 0.2" rotation="0 0 90" material="metalness:0.530; roughness:0.2"></a-torus>
 </a-entity>
+
+<a-entity id="bracelet-2" position="0.695 0.914 8.080" rotation="-90 0 0" scale="0.060 0.080 0.090">
+  <a-torus position="-1.162 0.000 -0.038" color="#C4C4C4" radius="0.5" radius-tubular="0.03" scale="0.4 1 0.2" rotation="0 0 90" material="metalness:0.530; roughness:0.2"></a-torus>
+  <a-sphere position="-0.570 0.000 -0.044" color="#FFFFFF" radius="0.12" scale="1.000 1.000 0.710" material="roughness:0.05; src: #pearl-texture"></a-sphere>
+
+  <a-torus position="0 0 -0.039" color="#C4C4C4" radius="0.5" radius-tubular="0.03" scale="0.4 1 0.2" rotation="0 0 90" material="metalness:0.530; roughness:0.2"></a-torus>
+  <a-sphere position="0.619 -0.025 0.000" color="#FFFFFF" radius="0.12" scale="1.000 1.000 0.710"material="roughness:0.05; src: #pearl-texture"></a-sphere>
+
+  <a-torus position="1.148 -0.044 0.000" color="#C4C4C4" radius="0.5" radius-tubular="0.03" scale="0.4 1 0.2" rotation="0 0 90" material="metalness:0.530; roughness:0.2"></a-torus>
+  <a-sphere position="1.715 0.000 0.000" color="#FFFFFF" radius="0.12" scale="1.000 1.000 0.710" material="roughness:0.05; src: #pearl-texture"></a-sphere>
+
+  <a-torus position="2.325 -0.036 0.000" rotation="0 0 90" color="#C4C4C4" radius="0.5" radius-tubular="0.03" scale="0.4 1 0.2" rotation="0 0 9０" material="metalness:0.53０; roughness:０.2"></a-torus>
+</a-entity>
+
+<a-entity id="bracelet-3" position="0.695 0.914 8.171" rotation="-90 0 0" scale="0.060 0.080 0.090">
+  <a-torus position="-1.162 0.000 -0.038" color="#b37a56" radius="0.5" radius-tubular="0.03" scale="0.4 1 0.2" rotation="0 0 90" material="metalness:0.530; roughness:0.2"></a-torus>
+  <a-sphere position="-0.570 0.000 -0.044" color="#FFFFFF" radius="0.12" scale="1.000 1.000 0.710" material="roughness:0.05; src: #pearl-texture"></a-sphere>
+
+  <a-torus position="0 0 -0.039" color="#b37a56" radius="0.5" radius-tubular="0.03" scale="0.4 1 0.2" rotation="0 0 90" material="metalness:0.530; roughness:0.2"></a-torus>
+  <a-sphere position="0.619 -0.025 0.000" color="#FFFFFF" radius="0.12" scale="1.000 1.000 0.710"material="roughness:0.05; src: #pearl-texture"></a-sphere>
+
+  <a-torus position="1.148 -0.044 0.000" color="#b37a56" radius="0.5" radius-tubular="0.03" scale="0.4 1 0.2" rotation="0 0 90" material="metalness:0.530; roughness:0.2"></a-torus>
+  <a-sphere position="1.715 0.000 0.000" color="#FFFFFF" radius="0.12" scale="1.000 1.000 0.710" material="roughness:0.05; src: #pearl-texture"></a-sphere>
+
+  <a-torus position="2.325 -0.036 0.000" rotation="0 0 90" color="#b37a56" radius="0.5" radius-tubular="0.03" scale="0.4 1 0.2" rotation="0 0 9０" material="metalness:0.53０; roughness:０.2"></a-torus>
+</a-entity>
+
+<a-entity
+    gltf-model="#white-column"
+    position="-2.400 0.000 10.093" 
+    rotation="0 0 0"
+    scale="1.000 1.000 1.000">
+</a-entity>
+
+<a-entity
+    gltf-model="#white-column"
+    position="-2.405 0.000 5.609" 
+    rotation="0 0 0"
+    scale="1.000 1.000 1.000">
+</a-entity>
+
+<a-entity id="luxury-gift-box" position="-4.940 0.958 5.405" rotation="0 90 0">
+  <a-box 
+    width="0.4" height="0.2" depth="0.3" 
+    color="#ebe1b6" 
+    material="roughness: 0.8; metalness: 0">
+  </a-box>
+
+  <a-plane 
+    width="0.25" height="0.1" 
+    position="0 0.006 0.152" 
+    rotation="0 0 0" 
+    scale="0.410 0.640 1.000" 
+    material="src: #box-logo; shader: flat; transparent: true; color: #c7c7c7; fog: false; precision: high"> 
+  </a-plane>
+
+  <a-plane 
+    width="0.3" height="0.2" 
+    position="-0.201 0 0" 
+    rotation="0 -90 0" 
+    color="#D4AF37" 
+    material="side: double; metalness: 0.3; roughness: 0.4">
+  </a-plane>
+
+  <a-plane 
+    width="0.3" height="0.2" 
+    position="0.201 0 0" 
+    rotation="0 90 0" 
+    color="#D4AF37" 
+    material="side: double; metalness: 0.3; roughness: 0.4">
+  </a-plane>
+
+  <a-plane 
+    width="0.25" height="0.12"
+    scale="1.420 1.000 1.000" 
+    position="0 0.101 0" 
+    rotation="-90 0 0" 
+    material="src: #sign-logo; transparent: true; alphaTest: 0.5">
+  </a-plane>
+</a-entity>
+
+<a-entity id="luxury-gift-box-2" position="-4.940 0.958 4.962" rotation="0 90 0">
+  <a-box 
+    width="0.4" height="0.2" depth="0.3" 
+    color="#ebe1b6" 
+    material="roughness: 0.8; metalness: 0">
+  </a-box>
+
+  <a-plane 
+    width="0.25" height="0.1" 
+    position="0 0.006 0.152" 
+    rotation="0 0 0" 
+    scale="0.410 0.640 1.000" 
+    material="src: #box-logo; shader: flat; transparent: true; color: #c7c7c7; fog: false; precision: high"> 
+  </a-plane>
+
+  <a-plane 
+    width="0.3" height="0.2" 
+    position="-0.201 0 0" 
+    rotation="0 -90 0" 
+    color="#D4AF37" 
+    material="side: double; metalness: 0.3; roughness: 0.4">
+  </a-plane>
+
+  <a-plane 
+    width="0.3" height="0.2" 
+    position="0.201 0 0" 
+    rotation="0 90 0" 
+    color="#D4AF37" 
+    material="side: double; metalness: 0.3; roughness: 0.4">
+  </a-plane>
+
+  <a-plane 
+    width="0.25" height="0.12"
+    scale="1.420 1.000 1.000" 
+    position="0 0.101 0" 
+    rotation="-90 0 0" 
+    material="src: #sign-logo; transparent: true; alphaTest: 0.5">
+  </a-plane>
+</a-entity>
+
+<a-entity id="luxury-gift-box-3" position="-4.940 1.161 5.178" rotation="0 90 0">
+  <a-box 
+    width="0.4" height="0.2" depth="0.3" 
+    color="#ebe1b6" 
+    material="roughness: 0.8; metalness: 0">
+  </a-box>
+
+  <a-plane 
+    width="0.25" height="0.1" 
+    position="0 0.006 0.152" 
+    rotation="0 0 0" 
+    scale="0.410 0.640 1.000" 
+    material="src: #box-logo; shader: flat; transparent: true; color: #c7c7c7; fog: false; precision: high"> 
+  </a-plane>
+
+  <a-plane 
+    width="0.3" height="0.2" 
+    position="-0.201 0 0" 
+    rotation="0 -90 0" 
+    color="#D4AF37" 
+    material="side: double; metalness: 0.3; roughness: 0.4">
+  </a-plane>
+
+  <a-plane 
+    width="0.3" height="0.2" 
+    position="0.201 0 0" 
+    rotation="0 90 0" 
+    color="#D4AF37" 
+    material="side: double; metalness: 0.3; roughness: 0.4">
+  </a-plane>
+
+  <a-plane 
+    width="0.25" height="0.12"
+    scale="1.420 1.000 1.000" 
+    position="0 0.101 0" 
+    rotation="-90 0 0" 
+    material="src: #sign-logo; transparent: true; alphaTest: 0.5">
+  </a-plane>
+</a-entity>
+
+<a-entity id="luxury-bag-v2" position="-4.075 0.800 3.167" rotation="0 90 0">
+  <a-box width="0.4" height="0.01" depth="0.15" color="#ebe1b6" position="0 0 0"></a-box>
+  <a-box id="bag-front" width="0.4" height="0.45" depth="0.01" color="#ebe1b6" position="0 0.22 0.075"></a-box>
+  <a-box id="bag-back" width="0.4" height="0.45" depth="0.01" color="#ebe1b6" position="0 0.22 -0.075"></a-box>
+  <a-box width="0.01" height="0.45" depth="0.15" color="#ebe1b6" position="0.2 0.22 0"></a-box>
+  <a-box width="0.01" height="0.45" depth="0.15" color="#ebe1b6" position="-0.2 0.22 0"></a-box>
+
+  <a-plane 
+    width="0.25" height="0.12"
+    scale="1.420 1.000 1.000" 
+    position="0.000 0.246 0.084" 
+    rotation="0 0 0" 
+    material="src: #sign-logo; transparent: true; alphaTest: 0.5">
+  </a-plane>
+
+  <a-entity id="handles" position="0 0.45 0">
+    <a-ring 
+    color="#5a7425" 
+    radius-inner="0.07" 
+    radius-outer="0.08" 
+    theta-length="180" 
+    rotation="180 0 0" 
+    position="0.000 -0.005 -0.083"
+    material="side: double">
+  </a-ring>
+
+  <a-ring 
+    color="#3e4d21" 
+    radius-inner="0.07" 
+    radius-outer="0.08" 
+    theta-length="180" 
+    rotation="180 0 0" 
+    position="0.000 -0.004 -0.084"
+    material="side: double">
+  </a-ring>
+  </a-entity>
+</a-entity>
+
 
 <a-entity id="rig" position="8.5 0 5.8" rotation="0 90 0">
   <a-camera look-controls wasd-controls></a-camera>
