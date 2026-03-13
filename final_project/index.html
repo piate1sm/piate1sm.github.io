@@ -11,6 +11,7 @@
       <a-sky color="#87CEEB"></a-sky>
       <a-plane rotation="-90 0 0" width="20" height="20" color="#7BC8A4" position="2.571 0.000 4.712"></a-plane>
       <a-plane position="3.330 0.152 -0.604" rotation="-90 0 0" width="1.880" height="1.730" src="#bathroom-floor"></a-plane>
+      <a-light type="ambient" color="#FF9D2E" intensity="0.5"></a-light>
 
       <a-assets>
         <img id="bathroom-floor" src="granite_tile_1k.blend/textures/granite_tile_diff_1k.jpg">
@@ -218,17 +219,17 @@
   
   <a-entity id="corner-filler" position="0.914 1.295 0">
     <a-box width="1.023" height="3.230" depth="0.050" position="0.508 0.284 0.006" material="color: #f7f5e6"></a-box> 
-    <a-box width="1.023" height="3.230" depth="0.050" position="0.503 0.000 -0.044" material="color: #556b2f"></a-box> </a-entity>
+    <a-box width="1.023" height="3.230" depth="0.050" position="0.503 0.309 -0.044" material="color: #556b2f"></a-box> </a-entity>
 
   <a-entity id="door-leaf" rotation="0 0 0" position="0 1.050 0">
-    <a-box width="0.914" height="3.230" depth="0.060" position="0.457 2.926 0.006" color="#ffc87a" material="src: #plywood; repeat: 1 1; roughness: 0.6"></a-box>
+    <a-box width="0.914" height="3.230" depth="0.060" position="0.457 0 0" color="#ffc87a" material="src: #plywood; repeat: 1 1; roughness: 0.6"></a-box>
     <a-sphere radius="0.035" position="0.82 0 0.04" material="color: #d4af37; metalness: 0.180"></a-sphere>
     <a-sphere radius="0.035" position="0.82 0 -0.04" material="color: #d4af37; metalness: 0.180"></a-sphere>
     <a-image src="#bathroom-sign" width="0.660" height="0.750" position="₀.469 ₀.495 ₀.₀35" transparent="true" alpha-test="₀.5" scale="₀.49₀ ₀.54₀ ₁.₀₀₀"></a-image>
   </a-entity>
 
-  <a-box width="0.914" height="0.49" depth="0.05" position="0.457 2.345 0.006" material="color: #f7f5e6"></a-box> 
-  <a-box width="0.914" height="0.49" depth="0.05" position="0.457 2.345 -0.045" material="color: #556b2f"></a-box> 
+  <a-box width="0.914" height="0.520" depth="0.05" position="0.457 2.926 0.006" material="color: #f7f5e6"></a-box> 
+  <a-box width="0.914" height="0.520" depth="0.05" position="0.457 2.925 -0.045" material="color: #556b2f"></a-box> 
 </a-entity>
 
 <a-entity id="bathroom-interior" position="0.5 0 0.5">
@@ -1138,7 +1139,7 @@
 </a-entity>
 
 <a-entity
-    gltf-model="#athena-model"position="4.435 0.000 7.794"rotation="0 180 0" scale="1 1 1"color="white">
+    gltf-model="#athena-model"position="4.609 0.000 7.794"rotation="0 180 0" scale="1.250 1.320 1.000"color="white">
 </a-entity>
 
 <a-entity light="type: ambient; color: #BBB"></a-entity>
@@ -1710,14 +1711,14 @@
     gltf-model="#white-column"
     position="-2.400 0.000 10.093" 
     rotation="0 0 0"
-    scale="1.000 1.000 1.000">
+    scale="1.000 1.230 1.000">
 </a-entity>
 
 <a-entity
     gltf-model="#white-column"
     position="-2.405 0.000 5.609" 
     rotation="0 0 0"
-    scale="1.000 1.000 1.000">
+    scale="1.000 1.230 1.000">
 </a-entity>
 
 <a-entity id="luxury-gift-box" position="-4.940 0.958 5.405" rotation="0 90 0">
@@ -1990,7 +1991,7 @@
   depth="0.050" 
   width="2.160" 
   height="4.570" 
-  color="#a50d0d" 
+  color="#f7f5e6" 
   position="4.109 3.211 6.327" 
   material="side: double">
 </a-box>
@@ -2000,7 +2001,7 @@
   depth="0.050" 
   width="3.010" 
   height="3.830" 
-  color="#a50d6d" 
+  color="#f7f5e6" 
   position="3.910 3.210 2.135" 
   material="side: double">
 </a-box>
@@ -2010,7 +2011,7 @@
   depth="0.050" 
   width="1.950" 
   height="1.780" 
-  color="#f2da40" 
+  color="#f7f5e6" 
   position="3.378 3.207 -0.665" 
   material="side: double">
 </a-box>
@@ -2020,7 +2021,7 @@
   depth="0.050" 
   width="4.790" 
   height="11.602" 
-  color="#43f240" 
+  color="#f7f5e6" 
   position="0.019 3.211 4.243" 
   material="side: double">
 </a-box>
@@ -2030,7 +2031,7 @@
   depth="0.050" 
   width="2.910" 
   height="5.540" 
-  color="#4084f2" 
+  color="#f7f5e6" 
   position="-3.747 3.209 4.117" 
   material="side: double">
 </a-box>
@@ -2040,10 +2041,157 @@
   depth="0.050" 
   width="0.650" 
   height="6.110" 
-  color="#f2a840" 
+  color="#f7f5e6" 
   position="2.740 3.213 6.984" 
   material="side: double">
 </a-box>
+
+<a-entity id="can-light-1" position="-3.186 3.180 2.687">
+  <a-cylinder radius="0.12" height="0.01" color="#D4AF37"></a-cylinder>
+  <a-circle 
+    radius="0.08" 
+    rotation="90 0 0" 
+    position="0 -0.016 0" 
+    material="color: #FFF; emissive: #FFA500; emissiveIntensity: 2">
+  </a-circle>
+  
+  <a-light 
+    type="directional" 
+    color="#FFA500" 
+    intensity="0.200" 
+    angle="45" 
+    penumbra="0.5" 
+    rotation="-90 0 0" 
+    distance="10" 
+    target="#front-checkout-counter">
+  </a-light>
+</a-entity>
+
+<a-entity id="can-light-2" position="-3.186 3.180 5.569">
+  <a-cylinder radius="0.12" height="0.01" color="#D4AF37"></a-cylinder>
+  <a-circle 
+    radius="0.08" 
+    rotation="90 0 0" 
+    position="0 -0.016 0" 
+    material="color: #FFF; emissive: #FFA500; emissiveIntensity: 2">
+  </a-circle>
+  
+  <a-light 
+    type="directional" 
+    color="#FFA500" 
+    intensity="0.200" 
+    angle="45" 
+    penumbra="0.5" 
+    rotation="-90 0 0" 
+    distance="10" 
+    target="#front-checkout-counter">
+  </a-light>
+</a-entity>
+
+<a-entity id="can-light-3" position="-1.190 3.180 0.502">
+  <a-cylinder radius="0.12" height="0.01" color="#D4AF37"></a-cylinder>
+  <a-circle 
+    radius="0.08" 
+    rotation="90 0 0" 
+    position="0 -0.016 0" 
+    material="color: #FFF; emissive: #FFA500; emissiveIntensity: 2">
+  </a-circle>
+  
+  <a-light 
+    type="directional" 
+    color="#FFA500" 
+    intensity="0.200" 
+    angle="45" 
+    penumbra="0.5" 
+    rotation="-90 0 0" 
+    distance="10" 
+    target="#floor">
+  </a-light>
+</a-entity>
+
+<a-entity id="can-light-4" position="1.223 3.180 0.502">
+  <a-cylinder radius="0.12" height="0.01" color="#D4AF37"></a-cylinder>
+  <a-circle 
+    radius="0.08" 
+    rotation="90 0 0" 
+    position="0 -0.016 0" 
+    material="color: #FFF; emissive: #FFA500; emissiveIntensity: 2">
+  </a-circle>
+  
+  <a-light 
+    type="directional" 
+    color="#FFA500" 
+    intensity="0.200" 
+    angle="45" 
+    penumbra="0.5" 
+    rotation="-90 0 0" 
+    distance="10" 
+    target="#floor">
+  </a-light>
+</a-entity>
+
+<a-entity id="can-light-5" position="3.314 3.180 -0.697">
+  <a-cylinder radius="0.12" height="0.01" color="#D4AF37"></a-cylinder>
+  <a-circle 
+    radius="0.08" 
+    rotation="90 0 0" 
+    position="0 -0.016 0" 
+    material="color: #FFF; emissive: #FFA500; emissiveIntensity: 2">
+  </a-circle>
+  
+  <a-light 
+    type="directional" 
+    color="#FFA500" 
+    intensity="0.200" 
+    angle="45" 
+    penumbra="0.5" 
+    rotation="-90 0 0" 
+    distance="10" 
+    target="#floor">
+  </a-light>
+</a-entity>
+
+<a-entity id="can-light-6" position="1.697 3.180 8.077">
+  <a-cylinder radius="0.12" height="0.01" color="#D4AF37"></a-cylinder>
+  <a-circle 
+    radius="0.08" 
+    rotation="90 0 0" 
+    position="0 -0.016 0" 
+    material="color: #FFF; emissive: #FFA500; emissiveIntensity: 2">
+  </a-circle>
+  
+  <a-light 
+    type="directional" 
+    color="#FFA500" 
+    intensity="0.200" 
+    angle="45" 
+    penumbra="0.5" 
+    rotation="-90 0 0" 
+    distance="10" 
+    target="#floor">
+  </a-light>
+</a-entity>
+
+<a-entity id="can-light-7" position="-1.034 3.180 8.077">
+  <a-cylinder radius="0.12" height="0.01" color="#D4AF37"></a-cylinder>
+  <a-circle 
+    radius="0.08" 
+    rotation="90 0 0" 
+    position="0 -0.016 0" 
+    material="color: #FFF; emissive: #FFA500; emissiveIntensity: 2">
+  </a-circle>
+  
+  <a-light 
+    type="directional" 
+    color="#FFA500" 
+    intensity="0.200" 
+    angle="45" 
+    penumbra="0.5" 
+    rotation="-90 0 0" 
+    distance="10" 
+    target="#floor">
+  </a-light>
+</a-entity>
 
 <a-entity id="rig" position="8.5 0 5.8" rotation="0 90 0">
   <a-camera look-controls wasd-controls></a-camera>
