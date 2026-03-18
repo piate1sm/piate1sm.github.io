@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.4/dist/aframe-physics-system.min.js"></script>
+  </head>
+  <body>
+    <a-scene physics="debug: true">
+  <a-sky color="black"></a-sky>
+
+  <a-box position="0 0 -10" width="4" height="0.1" depth="20" color="#1e8555" static-body></a-box>
+
+  <a-box position="-2.1 0.1 -10" width="0.2" height="0.3" depth="20" color="white" static-body></a-box>
+  <a-box position="2.1 0.1 -10" width="0.2" height="0.3" depth="20" color="white" static-body></a-box>
+
+  <a-cylinder position="0 0.75 -15" radius="0.3" height="1.5" color="white" dynamic-body="mass: 0.5; restitution: 0.7;"></a-cylinder>
+  <a-cylinder position="-0.5 0.75 -16" radius="0.3" height="1.5" color="white" dynamic-body="mass: 0.5; restitution: 0.7;"></a-cylinder>
+  <a-cylinder position="0.5 0.75 -16" radius="0.3" height="1.5" color="white" dynamic-body="mass: 0.5; restitution: 0.7;"></a-cylinder>
+  <a-cylinder position="-1 0.75 -17" radius="0.3" height="1.5" color="white" dynamic-body="mass: 0.5; restitution: 0.7;"></a-cylinder>
+  <a-cylinder position="0 0.75 -17" radius="0.3" height="1.5" color="white" dynamic-body="mass: 0.5; restitution: 0.7;"></a-cylinder>
+  <a-cylinder position="1 0.75 -17" radius="0.3" height="1.5" color="white" dynamic-body="mass: 0.5; restitution: 0.7;"></a-cylinder>
+
+  <a-sphere position="0 4.5 2.5" radius="0.5" color="#FFF" dynamic-body="mass: 50"></a-sphere>
+
+  <a-box id="ramp"
+         position="0.013 2.363 0.817" 
+         rotation="45 0 0" 
+         width="4" height="6" depth="0.1" 
+         color="white" 
+         static-body>
+  </a-box>
+
+  <a-box position="0.000 0.409 -20.263" width="4.970" height="0.970" depth="0.5" color="#FFF" static-body></a-box>
+
+  <a-entity id="rig" position="10 2 -10" rotation="0 90 0">
+  <a-camera look-controls wasd-controls></a-camera>
+</a-entity>
+</a-scene>
+  </body>
+</html>
