@@ -1,9 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+  <script>
+  AFRAME.registerComponent('door-listener', {
+  init: function () {
+    this.isOpen = false;
+    
+    this.el.addEventListener('click', () => {
+      // Find the parent hinge (the wrapper)
+      let wrapper = this.el.closest('[id*="wrapper"]'); 
+      if (!wrapper) return;
+
+      this.isOpen = !this.isOpen;
+      
+      // Determine direction: Left swings positive 90, Right swings negative 90
+      let angle = 90;
+      if (wrapper.id.includes('right')) {
+        angle = -90;
+      }
+
+      let targetRotation = this.isOpen ? `0 ${angle} 0` : "0 0 0";
+
+      wrapper.setAttribute('animation', {
+        property: 'rotation',
+        to: targetRotation,
+        dur: 800,
+        easing: 'easeInOutQuad'
+      });
+    });
+  }
+});
+</script>
   </head>
   <body>
 
@@ -20,7 +50,8 @@
 
     <a-plane rotation="-90 0 0" width="20" height="20" color="#7BC8A4" position="2.571 0.000 4.712" static-body></a-plane>
 
-
+    <a-plane static-body position="3.642 0.000 0.821" rotation="-90 90 0" width="1.190" height="2.540" 
+           src="#bathroom-flooring" material="repeat: 2 1.5"></a-plane>
       
       <a-assets>
         <img id="bathroom-floor" src="granite_tile_1k.blend/textures/granite_tile_diff_1k.jpg">
@@ -131,13 +162,13 @@
   <a-plane static-body position="0.362 0.000 8.416" rotation="-90 90 0" width="3.150" height="5.310" 
            src="#flooring" color="#7d6464" material="repeat: 1.5 3"></a-plane>
 
-  <a-plane static-body position="0.362 0.000 -0.068" rotation="-90 90 0" width="2.910" height="5.310" 
+  <a-plane static-body position="-0.025 0.000 -0.077" rotation="-90 90 0" width="2.910" height="4.600" 
            src="#flooring" color="#7d6464" material="repeat: 2 1.5"></a-plane>
 
   <a-plane static-body position="4.196 0.000 7.690" rotation="-90 90 0" width="1.720" height="2.390" 
            src="#flooring" color="#7d6464" material="repeat: 1.5 3"></a-plane>
 
-  <a-plane static-body position="3.967 0.000 0.819" rotation="-90 90 0" width="1.190" height="1.920" 
+  <a-plane static-body position="3.642 0.000 0.820" rotation="-90 90 0" width="1.120" height="2.540" 
            src="#flooring" color="#7d6464" material="repeat: 2 1.5"></a-plane>
 
 </a-entity>
@@ -214,7 +245,7 @@
 </a-entity>
 
 <a-entity id="wall-4ft-5.5in" position="5.361 1.295 0.900" rotation="0 -90 0">
-  <a-box static-body width="1.359" height="3.230" depth="0.05" position="0 0.279 -0.025" material="color: #f7f5e6"></a-box>
+  <a-box static-body width="1.359" height="3.230" depth="0.05" position="0 0.279 -0.040" material="color: #f7f5e6"></a-box>
 </a-entity>
 
 <a-entity id="wall-4ft" position="5.414 1.295 2.191" rotation="0 -90 0">
@@ -243,15 +274,25 @@
     <a-box static-body width="1.023" height="3.230" depth="0.050" position="0.508 0.284 0.006" material="color: #f7f5e6"></a-box> 
     <a-box static-body width="1.023" height="3.230" depth="0.050" position="0.503 0.309 -0.044" material="color: #556b2f"></a-box> </a-entity>
 
-  <a-entity id="door-leaf" rotation="0 0 0" position="0 1.050 0">
-    <a-box width="0.914" height="3.230" depth="0.060" position="0.457 0 0" color="#ffc87a" material="src: #plywood; repeat: 1 1; roughness: 0.6"></a-box>
-    <a-sphere radius="0.035" position="0.82 0 0.04" material="color: #d4af37; metalness: 0.180"></a-sphere>
-    <a-sphere radius="0.035" position="0.82 0 -0.04" material="color: #d4af37; metalness: 0.180"></a-sphere>
-    <a-image src="#bathroom-sign" width="0.660" height="0.750" position="0.469 0.887 0.035" transparent="true" alpha-test="0.5" scale="0.490 0.540 1.000"></a-image>
+  <a-entity id="door-wrapper" position="0 1.615 0" rotation="0 0 0">
+  <a-entity id="door-leaf" position="0.457 0 0">
+    <a-box class="clickable"
+           static-body 
+           width="0.914" height="3.230" depth="0.060" 
+           color="#ffc87a" 
+           material="src: #plywood; repeat: 1 1; roughness: 0.6"
+           position="0.000 -0.556 0.000"
+           door-listener> 
+    </a-box>
+    <a-sphere class="clickable" radius="0.035" position="0.360 -0.360 0.040" material="color: #d4af37; metalness: 0.180" door-listener></a-sphere>
+    <a-sphere class="clickable" radius="0.035" position="0.360 -0.360 -0.040" material="color: #d4af37; metalness: 0.180" door-listener></a-sphere>
+    <a-image src="#bathroom-sign" width="0.660" height="0.750" position="0.012 0.386 0.035" transparent="true" alpha-test="0.5" scale="0.490 0.540 1.000"></a-image>
   </a-entity>
+</a-entity>
 
   <a-box static-body width="0.914" height="0.520" depth="0.05" position="0.457 2.926 0.006" material="color: #f7f5e6"></a-box> 
-  <a-box static-body width="0.914" height="0.520" depth="0.05" position="0.457 2.925 -0.045" material="color: #556b2f"></a-box> 
+  <a-box static-body width="0.914" height="0.520" depth="0.05" position="0.457 2.925 -0.045" material="color: #556b2f"></a-box>
+   
 </a-entity>
 
 <a-entity id="bathroom-interior" position="0.5 0 0.5">
@@ -502,31 +543,40 @@
               <a-box width="0.12" height="0.6" depth="0.02" position="0 -0.9 0.105" color="#f2f2f2"></a-box>
               <a-box width="0.24" height="0.12" depth="0.340" position="0 -0.450 0.253" color="#f7f5e6"></a-box>
            </a-entity>
+           
 
            <a-entity id="doors" position="0 1.150 0.612">
-              <a-entity id="door-L" position="-0.330 0 0.075">
-                 <a-box width="0.680" height="2.540" depth="0.06" position="0 0.082 0" color="#f7f5e6">
-                    <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
-                    <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true" ></a-box>
-                    <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="src: #door-sign; side: flat; transparent: true; roughness: 1;"></a-box>
-                    <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 0.03" color="#f0f0f0"></a-box>
-                    <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 -0.03" color="#f0f0f0"></a-box>
-                 </a-box>
-                 <a-cylinder radius="0.01" height="0.4" position="0.28 0 0.05" color="#d4af37" metalness="0.180"></a-cylinder>
-                 <a-cylinder radius="0.01" height="0.4" position="0.28 0 -0.05" color="#d4af37" metalness="0.180"></a-cylinder>
-          </a-entity>
+  
+  <a-entity id="front-wrapper-left" position="-0.67 0 0.075">
+    <a-entity id="door-L-leaf" position="0.34 0 0"> 
+      <a-box class="clickable" door-listener
+             width="0.680" height="2.540" depth="0.06" color="#f7f5e6">
+        <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
+        <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
+        <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="src: #door-sign; side: flat; transparent: true; roughness: 1;"></a-box>
+        <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 0.03" color="#f0f0f0"></a-box>
+        <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 -0.03" color="#f0f0f0"></a-box>
+      </a-box>
+      <a-cylinder radius="0.01" height="0.4" position="0.28 0 0.05" color="#d4af37" metalness="0.180"></a-cylinder>
+      <a-cylinder radius="0.01" height="0.4" position="0.28 0 -0.05" color="#d4af37" metalness="0.180"></a-cylinder>
+    </a-entity>
+  </a-entity>
 
-              <a-entity id="door-R" position="0.330 0 0.075">
-                 <a-box width="0.680" height="2.540" depth="0.06" position="0 0.082 0" color="#f7f5e6">
-                    <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
-                    <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
-                    <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 0.03" color="#f0f0f0"></a-box>
-                    <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 -0.03" color="#f0f0f0"></a-box>
-                 </a-box>
-                 <a-cylinder radius="0.01" height="0.4" position="-0.28 0 0.05" color="#d4af37" metalness="0.180"></a-cylinder>
-                 <a-cylinder radius="0.01" height="0.4" position="-0.28 0 -0.05" color="#d4af37" metalness="0.180"></a-cylinder>
-              </a-entity>
-           </a-entity>
+  <a-entity id="front-wrapper-right" position="0.67 0 0.075">
+    <a-entity id="door-R-leaf" position="-0.34 0 0">
+      <a-box class="clickable" door-listener
+             width="0.680" height="2.540" depth="0.06" color="#f7f5e6">
+        <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
+        <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
+        <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 0.03" color="#f0f0f0"></a-box>
+        <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 -0.03" color="#f0f0f0"></a-box>
+      </a-box>
+      <a-cylinder radius="0.01" height="0.4" position="-0.28 0 0.05" color="#d4af37" metalness="0.180"></a-cylinder>
+      <a-cylinder radius="0.01" height="0.4" position="-0.28 0 -0.05" color="#d4af37" metalness="0.180"></a-cylinder>
+    </a-entity>
+  </a-entity>
+
+</a-entity>
       </a-entity>
     </a-entity>
 
@@ -2339,9 +2389,20 @@
     scale="0.055 0.045 0.035">
 </a-entity>
 
-<a-entity id="rig" position="8.0 0 5.8" rotation="0 90 0">
-  <a-camera look-controls wasd-controls></a-camera>
+<a-entity id="rig" position="8.0 0.1 5.8" rotation="0 90 0" kinematic-body="radius: 0.35">
+  <a-camera look-controls wasd-controls>
+    <a-entity cursor="fuse: false; rayOrigin: mouse;"
+              raycaster="objects: .clickable"
+              position="0 0 -1"
+              geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+              material="color: black; shader: flat">
+    </a-entity>
+  </a-camera>
+  <!-- Adding a laser for VR Headset users -->
+  <a-entity laser-controls="hand: right" raycaster="objects: .clickable; far: 5"></a-entity>
 </a-entity>
+
+
 
     </a-scene>
   </body>
