@@ -243,7 +243,7 @@
 </a-entity>
 
 <a-entity id="wall-4ft-5.5in" position="5.361 1.295 0.900" rotation="0 -90 0">
-  <a-box static-body width="1.359" height="3.230" depth="0.05" position="0 0.279 -0.040" material="color: #f7f5e6"></a-box>
+  <a-box static-body width="1.359" height="3.230" depth="0.05" position="0 0.279 -0.026" material="color: #f7f5e6"></a-box>
 </a-entity>
 
 <a-entity id="wall-4ft" position="5.414 1.295 2.191" rotation="0 -90 0">
@@ -557,10 +557,10 @@
   <a-entity id="front-wrapper-left" position="-0.67 0 0.075">
     <a-entity id="door-L-leaf" position="0.34 0 0"> 
       <a-box class="clickable" door-listener
-             width="0.680" height="2.540" depth="0.06" color="#f7f5e6">
+             width="0.680" height="2.540" depth="0.06" color="#f7f5e6" position="0.000 0.096 0.000">
         <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
         <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
-        <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="src: #door-sign; side: flat; transparent: true; roughness: 1;"></a-box>
+        <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="src: #door-sign; side: flat; color:#e1cb37; transparent: true; roughness: 1;"></a-box>
         <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 0.03" color="#f0f0f0"></a-box>
         <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 -0.03" color="#f0f0f0"></a-box>
       </a-box>
@@ -572,7 +572,7 @@
   <a-entity id="front-wrapper-right" position="0.67 0 0.075">
     <a-entity id="door-R-leaf" position="-0.34 0 0">
       <a-box class="clickable" door-listener
-             width="0.680" height="2.540" depth="0.06" color="#f7f5e6">
+             width="0.680" height="2.540" depth="0.06" color="#f7f5e6" position="0.000 0.096 0.000">
         <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
         <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
         <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 0.03" color="#f0f0f0"></a-box>
@@ -1817,7 +1817,7 @@
     position="0 0.006 0.152" 
     rotation="0 0 0" 
     scale="0.410 0.640 1.000" 
-    material="src: #box-logo; shader: flat; transparent: true; color: #c7c7c7; fog: false; precision: high"> 
+    material="src: #box-logo; shader: flat; transparent: true; color: #fbdb74; fog: false; precision: high"> 
   </a-plane>
 
   <a-plane 
@@ -1841,7 +1841,7 @@
     scale="1.420 1.000 1.000" 
     position="0 0.101 0" 
     rotation="-90 0 0" 
-    material="src: #sign-logo; transparent: true; alphaTest: 0.5">
+    material="src: #sign-logo; color: #fbdb74; transparent: true; alphaTest: 0.5">
   </a-plane>
 </a-entity>
 
@@ -1857,7 +1857,7 @@
     position="0 0.006 0.152" 
     rotation="0 0 0" 
     scale="0.410 0.640 1.000" 
-    material="src: #box-logo; shader: flat; transparent: true; color: #c7c7c7; fog: false; precision: high"> 
+    material="src: #box-logo; shader: flat; transparent: true; color: #fbdb74; fog: false; precision: high"> 
   </a-plane>
 
   <a-plane 
@@ -1881,7 +1881,7 @@
     scale="1.420 1.000 1.000" 
     position="0 0.101 0" 
     rotation="-90 0 0" 
-    material="src: #sign-logo; transparent: true; alphaTest: 0.5">
+    material="src: #sign-logo; color: #fbdb74; transparent: true; alphaTest: 0.5">
   </a-plane>
 </a-entity>
 
@@ -1897,7 +1897,7 @@
     position="0 0.006 0.152" 
     rotation="0 0 0" 
     scale="0.410 0.640 1.000" 
-    material="src: #box-logo; shader: flat; transparent: true; color: #c7c7c7; fog: false; precision: high"> 
+    material="src: #box-logo; shader: flat; transparent: true; color: #fbdb74; fog: false; precision: high"> 
   </a-plane>
 
   <a-plane 
@@ -1921,7 +1921,7 @@
     scale="1.420 1.000 1.000" 
     position="0 0.101 0" 
     rotation="-90 0 0" 
-    material="src: #sign-logo; transparent: true; alphaTest: 0.5">
+    material="src: #sign-logo; color: #fbdb74; transparent: true; alphaTest: 0.5">
   </a-plane>
 </a-entity>
 
@@ -1937,12 +1937,12 @@
     scale="1.420 1.000 1.000" 
     position="0.000 0.246 0.084" 
     rotation="0 0 0" 
-    material="src: #sign-logo; transparent: true; alphaTest: 0.5">
+    material="src: #sign-logo; color: #fbdb74; transparent: true; alphaTest: 0.5">
   </a-plane>
 
   <a-entity id="handles" position="0 0.45 0">
     <a-ring 
-    color="#5a7425" 
+    color="#647a38" 
     radius-inner="0.07" 
     radius-outer="0.08" 
     theta-length="180" 
@@ -1952,7 +1952,7 @@
   </a-ring>
 
   <a-ring 
-    color="#3e4d21" 
+    color="#647a38" 
     radius-inner="0.07" 
     radius-outer="0.08" 
     theta-length="180" 
@@ -1975,12 +1975,12 @@
     scale="1.420 1.000 1.000" 
     position="0.000 0.246 0.084" 
     rotation="0 0 0" 
-    material="src: #sign-logo; transparent: true; alphaTest: 0.5">
+    material="src: #sign-logo; color: #fbdb74; transparent: true; alphaTest: 0.5">
   </a-plane>
 
   <a-entity id="handles" position="0 0.45 0">
     <a-ring 
-    color="#5a7425" 
+    color="#647a38" 
     radius-inner="0.07" 
     radius-outer="0.08" 
     theta-length="180" 
@@ -1990,7 +1990,7 @@
   </a-ring>
 
   <a-ring 
-    color="#3e4d21" 
+    color="#647a38" 
     radius-inner="0.07" 
     radius-outer="0.08" 
     theta-length="180" 
